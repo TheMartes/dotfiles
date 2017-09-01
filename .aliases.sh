@@ -11,8 +11,8 @@ alias rollback="php artisan migrate:rollback"
 alias refresh="php artisan migrate:refresh"
 alias fresh="php artisan migrate:fresh"
 alias serve="php artisan serve"
-alias m:controller="php artisan make:controller $1 -r"
-alias m:model="php artisan make:model $1 -m"
+alias m:c="php artisan make:controller $1 -r"
+alias m:m="php artisan make:model $1 -m"
 alias tinker="php artisan tinker"
 
 #Composer

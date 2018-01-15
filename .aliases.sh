@@ -1,10 +1,8 @@
 #System
 alias dev="cd ~/Code"
 alias c="clear"
-alias ls="colorls"
-alias l="colorls -l"
-alias la="colorls -a"
-alias open="nautilus $1"
+alias l="ls -oh"
+alias la="ls -oAh"
 
 #Laravel
 alias art="php artisan"

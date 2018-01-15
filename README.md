@@ -30,6 +30,6 @@
 + To be more productive on mac, i can't stand out Spotlight and Default App Switcher on mac (Alt + Tab), i've investigate a quick research, and i'm pretty happy with [Alfred](https://www.alfredapp.com/) and [Contexts](https://contexts.co/)
 
 #### Bonus
-I'm also using [JetBrains Toolbox](https://www.jetbrains.com/toolbox/), to keed my IDE's Up2Date, and 🚀 [Emoji Picker](http://matthewpalmer.net/rocket/). 
+I'm also using [JetBrains Toolbox](https://www.jetbrains.com/toolbox/), to keep my IDE's Up2Date, and 🚀 [Emoji Picker](http://matthewpalmer.net/rocket/). 
 
 

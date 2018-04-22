@@ -26,7 +26,7 @@
 + For Office i used to use [Google Docs](docs.google.com), since it's free and awesome, but for more complex work with documents in past few months i'm using [MS Office](https://products.office.com/)
 + Speaking of documents, for markdown is best [MacDown](http://macdown.uranusjr.com/)
 + My files are safe in [Dropbox](https://www.dropbox.com/)
-+ [FileZilla](https://filezilla-project.org/) as my primary FTP Client
++ [Transmit](https://panic.com/transmit/) as my primary FTP Client
 + To be more productive on mac, i can't stand out Spotlight and Default App Switcher on mac (Alt + Tab), i've investigate a quick research, and i'm pretty happy with [Alfred](https://www.alfredapp.com/) and [Contexts](https://contexts.co/)
 
 #### Bonus

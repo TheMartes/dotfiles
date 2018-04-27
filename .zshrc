@@ -18,3 +18,6 @@ source $ZSH/oh-my-zsh.sh
 # Aliases
 source $HOME/.aliases.sh
 source $HOME/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+
+# Start tmux
+tmux

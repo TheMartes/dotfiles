@@ -2,11 +2,11 @@
 export PATH=$HOME/bin:/usr/local/bin:$PATH
 export PATH=$HOME/.composer/vendor/bin:$PATH
 
-# Path to your oh-my-zsh installation.
-export ZSH=/Volumes/martes/.oh-my-zsh
+# Path to oh-my-zsh installation.
+export ZSH=/Users/martes/.oh-my-zsh
 
 # Theme
-ZSH_THEME="spaceship"
+ZSH_THEME="oxide"
 
 # Plugins
 plugins=(
@@ -17,6 +17,4 @@ source $ZSH/oh-my-zsh.sh
 
 # Aliases
 source $HOME/.aliases.sh
-
-# Spaceship Theme
-source "/Volumes/martes/.oh-my-zsh/custom/themes/spaceship.zsh-theme"
+source $HOME/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh

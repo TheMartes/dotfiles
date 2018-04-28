@@ -8,9 +8,9 @@
 ***
 ## Apps
 ### Development
-+ **Editor:** [Visual Studio Code](https://code.visualstudio.com/) + My [config files](https://gist.github.com/TheMartes/078234c5d5ef728f143ce7d486637684)
++ **Editor:** [Sublime Text](https://www.sublimetext.com/) + My [config files](https://gist.github.com/TheMartes/8321427fcb6491dca811b5c04f75271b)
 + **IDE:** Huge fan of [PHPStorm](https://www.jetbrains.com/phpstorm/), helps me a lot in larger projects
-+ **Terminal:** [iTerm2](https://iterm2.com/) + [HyperTerm](https://hyper.is/), using them according to my mood.
++ **Terminal:** [iTerm2](https://iterm2.com/) + tmux [with my config] files(https://github.com/TheMartes/dotfiles/blob/master/.tmux.conf).
 + **Database Client:** [SequelPro](https://sequelpro.com/), probably most awesome MySQL Client for mac. For redis i'm using [Medis](http://getmedis.com/)
 + **API Testing** is delivered by [Postman](https://www.getpostman.com/)
 + **Docker** for containers, and [Valet](https://laravel.com/docs/5.5/valet) for localhost

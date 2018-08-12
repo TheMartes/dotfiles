@@ -1,4 +1,4 @@
-<h1 align="center">macOS dotfiles ❤ ~/</h1>
+<h1 align="center">🔥 macOS dotfiles 🔥</h1>
 
 ![dotfiles](https://themartes.com/images/dotfiles.png)
 

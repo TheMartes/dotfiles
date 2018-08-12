@@ -5,6 +5,18 @@
 2. Make sure you have Fish shell and OH-MY-FISH installed
 3. Symlink all files. (Now you can pull repo for updated and every symlinked file will be changed)
 4. Done
+
+### Terminal commands
+```shell-script
+$ cd ~
+$ git clone https://github.com/TheMartes/dotfiles .files
+$ ln -s $HOME/.files/.aliases.sh $HOME/.aliases.sh
+$ ln -s $HOME/.files/.tmux.conf $HOME/.tmux.conf
+$ ln -s $HOME/.files/fish/ $HOME/.config/fish
+$ ln -s $HOME/.files/omf/ $HOME/.config/omf
+$ ln -s $HOME/.files/nvim/ $HOME/.config/nvim
+```
+
 ***
 ## Apps
 ### Development

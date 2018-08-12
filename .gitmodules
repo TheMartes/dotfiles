@@ -1,0 +1,60 @@
+[submodule "nvim/bundle/ack.vim"]
+	path = nvim/bundle/ack.vim
+	url = https://github.com/mileszs/ack.vim
+[submodule "nvim/bundle/auto-pairs"]
+	path = nvim/bundle/auto-pairs
+	url = https://github.com/jiangmiao/auto-pairs
+[submodule "nvim/bundle/ctrlp.vim"]
+	path = nvim/bundle/ctrlp.vim
+	url = https://github.com/kien/ctrlp.vim
+[submodule "nvim/bundle/dracula-theme"]
+	path = nvim/bundle/dracula-theme
+	url = https://github.com/dracula/vim
+[submodule "nvim/bundle/emmet-vim"]
+	path = nvim/bundle/emmet-vim
+	url = https://github.com/mattn/emmet-vim
+[submodule "nvim/bundle/ferret"]
+	path = nvim/bundle/ferret
+	url = https://github.com/wincent/ferret.git
+[submodule "nvim/bundle/lightline.vim"]
+	path = nvim/bundle/lightline.vim
+	url = https://github.com/itchyny/lightline.vim
+[submodule "nvim/bundle/nerdtree"]
+	path = nvim/bundle/nerdtree
+	url = https://github.com/scrooloose/nerdtree
+[submodule "nvim/bundle/nette.vim"]
+	path = nvim/bundle/nette.vim
+	url = https://github.com/fpob/nette.vim
+[submodule "nvim/bundle/pathogen"]
+	path = nvim/bundle/pathogen
+	url = https://github.com/tpope/vim-pathogen
+[submodule "nvim/bundle/phpcomplete-extended"]
+	path = nvim/bundle/phpcomplete-extended
+	url = https://github.com/m2mdas/phpcomplete-extended
+[submodule "nvim/bundle/tagbar"]
+	path = nvim/bundle/tagbar
+	url = https://github.com/majutsushi/tagbar
+[submodule "nvim/bundle/vim-blade"]
+	path = nvim/bundle/vim-blade
+	url = https://github.com/jwalton512/vim-blade
+[submodule "nvim/bundle/vim-devicons"]
+	path = nvim/bundle/vim-devicons
+	url = https://github.com/ryanoasis/vim-devicons
+[submodule "nvim/bundle/vim-fugitive"]
+	path = nvim/bundle/vim-fugitive
+	url = https://github.com/tpope/vim-fugitive
+[submodule "nvim/bundle/vim-gitgutter"]
+	path = nvim/bundle/vim-gitgutter
+	url = https://github.com/airblade/vim-gitgutter
+[submodule "nvim/bundle/vim-php-cs-fixer"]
+	path = nvim/bundle/vim-php-cs-fixer
+	url = https://github.com/stephpy/vim-php-cs-fixer
+[submodule "nvim/bundle/vim-snippets"]
+	path = nvim/bundle/vim-snippets
+	url = https://github.com/honza/vim-snippets
+[submodule "nvim/bundle/vim-surround"]
+	path = nvim/bundle/vim-surround
+	url = https://github.com/tpope/vim-surround
+[submodule "nvim/bundle/vimproc.vim"]
+	path = nvim/bundle/vimproc.vim
+	url = https://github.com/Shougo/vimproc.vim

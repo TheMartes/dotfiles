@@ -58,3 +58,9 @@
 [submodule "nvim/bundle/vimproc.vim"]
 	path = nvim/bundle/vimproc.vim
 	url = https://github.com/Shougo/vimproc.vim
+[submodule "nvim/bundle/ctrlp-funky"]
+	path = nvim/bundle/ctrlp-funky
+	url = https://github.com/tacahiroy/ctrlp-funky
+[submodule "nvim/bundle/discord.nvim"]
+	path = nvim/bundle/discord.nvim
+	url = https://github.com/aurieh/discord.nvim

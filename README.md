@@ -1,4 +1,6 @@
-# macOS dotfiles by TheMartes
+<h1 align="center">🔥 macOS dotfiles 🔥</h1>
+
+![dotfiles](https://themartes.com/images/dotfiles.png)
 
 ## Config files installation
 1. Clone repo into your $HOME and name it .files

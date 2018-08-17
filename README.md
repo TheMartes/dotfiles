@@ -1,6 +1,6 @@
 <h1 align="center">🔥 macOS dotfiles 🔥</h1>
 
-![dotfiles](https://imgur.com/a/Pqw4Bf8)
+![dotfiles](https://i.imgur.com/z1D20AT.png)
 
 ## Config files installation
 1. Clone repo into your $HOME and name it .files

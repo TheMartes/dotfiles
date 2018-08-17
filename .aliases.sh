@@ -3,9 +3,6 @@ alias dev="cd ~/Code"
 alias c="clear"
 alias l="ls -oh"
 alias la="ls -oAh"
-alias app="cd $HOME/Code/analyso/app"
-alias tlkit="cd $HOME/Code/analyso/toolkit"
-alias analyso="cd $HOME/Code/analyso"
 
 #Laravel
 alias art="php artisan"

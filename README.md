@@ -17,7 +17,7 @@ $ ln -s $HOME/.files/.tmux.conf $HOME/.tmux.conf
 $ ln -s $HOME/.files/fish/ $HOME/.config/fish
 $ ln -s $HOME/.files/omf/ $HOME/.config/omf
 $ ln -s $HOME/.files/nvim/ $HOME/.config/nvim
-$ ln -s $HOME/.files/.zshrv $HOME/.zshrc
+$ ln -s $HOME/.files/.zshrc $HOME/.zshrc
 ```
 
 ***

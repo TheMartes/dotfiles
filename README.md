@@ -30,6 +30,18 @@ tmux source-file $HOME/.tmux.conf
 git submodule update --init --recursive
 ```
 
+### Update VIMProc for your system
+If you're on ubuntu you will need following packages
+```
+sudo apt install gcc && make
+```
+Remember that the APT package manager will work only on ubuntu and debian, so you'll need to use your package manager like `dnf`, `pacman` or `brew`  
+
+If you have the package already install then go into the vimproc directory and run `make`. Or enter following command
+```
+cd $HOME/.files/nvim/bundle/vimproc.vim && make
+```
+
 ***
 ## Apps
 ### Development

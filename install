@@ -1,20 +1,10 @@
 #!/bin/bash
 
-# Check for root privileges
-rootcheck () {
-    if [ $(id -u) != "0"  ]
-        then
-           sudo "$0" "$@"
-        exit $?
-           fi
-
-}
-
 # Updates mirrors
-apt update
+sudo apt update
 
 # Install Packages
-apt --asume-yes install libnss3-tools \
+sudo apt install -y libnss3-tools \
                         jq \
                         xsel \
                         php-cli \
@@ -31,7 +21,7 @@ apt --asume-yes install libnss3-tools \
                         mysqk-workbench
 
 # Install snap packages
-snap install spotify \
+sudo snap install spotify \
              discord \
              redis-desktop-manager \
              gitkraken \
@@ -46,26 +36,20 @@ mkdir $HOME/.fonts
 mkdir $HOME/.themes
 mkdir $HOME/.icons
 
-# Setup Oh My Z-Shell
-apt install zsh curl wget
-sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
-rm $HOME/.zshrc
-ln -s .zshrc-linux $HOME/.zshrc
-
 # Setup tmux config
-apt install tmux
+sudo apt install tmux
 rm $HOME/.tmux.conf
 ln -s .tmux.conf $HOME/.tmux.conf
 tmux source-file $HOME/.tmux.conf
 
 # Setup neoVIM
-apt install neovim
+sudo apt install neovim
 git submodule update --init --recursive
 rm -rf $HOME/.config/nvim
 ln -s nvim/ $HOME/.config/nvim
 
 # Patch vimproc plugin
-apt install gcc && make
+sudo apt install gcc && make
 cd nvim/bundle/vimproc.vim && make
 cd ../../../
 
@@ -73,8 +57,8 @@ cd ../../../
 ln -s .aliases.sh $HOME/.aliases.sh
 
 # Install Docker
-apt remove docker docker-engine docker.io
-apt install apt-transport-https \
+sudo apt remove docker docker-engine docker.io
+sudo apt install apt-transport-https \
         	ca-certificates \
             curl \
             software-properties-common
@@ -83,15 +67,15 @@ apt-key fingerprint 0EBFCD88
 sudo add-apt-repository "deb [arch=amd64] https://download.docker.com/linux/ubuntu \
       					$(lsb_release -cs) \
          				stable"
-apt update
-apt install docker-ce
+sudo apt update
+sudo apt install docker-ce
 
 # Install composer
 php -r "copy('https://getcomposer.org/installer', 'composer-setup.php');"
 php -r "if (hash_file('SHA384', 'composer-setup.php') === '93b54496392c062774670ac18b134c3b3a95e5a5e5c8f1a9f115f203b75bf9a129d5daa8ba6a13e2cc8a1da0806388a8') { echo 'Installer verified';  } else { echo 'Installer corrupt'; unlink('composer-setup.php');  } echo PHP_EOL;"
 php composer-setup.php
 php -r "unlink('composer-setup.php');"
-mv composer.phar /usr/local/bin/composer
+sudo mv composer.phar /usr/local/bin/composer
 
 # Install Laravel Valet for localhost
 composer global require cpriego/valet-linux
@@ -104,7 +88,13 @@ valet start
 composer global require "laravel/installer"
 
 # Install NodeJS & Dependencies
-apt install nodejs && npm
+sudo apt install nodejs && npm
+
+# Setup Oh My Z-Shell
+sudo apt install zsh curl wget
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
+rm $HOME/.zshrc
+ln -s .zshrc-linux $HOME/.zshrc
 
 echo '########################################################'
 echo '########################################################'

@@ -3,6 +3,7 @@ alias dev="cd ~/Code"
 alias c="clear"
 alias l="ls -oh"
 alias la="ls -oAh"
+alias v="nvim "
 
 #Laravel
 alias art="php artisan"

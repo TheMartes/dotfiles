@@ -10,6 +10,7 @@ echo 'APT update finished...'
 echo -e $TEXT_RESET
 
 packagelist=(
+    git
     libnss3-tools
     jq
     xsel
@@ -41,6 +42,9 @@ snapclassicpackagelist=(
     slack
 )
 
+# Clone dotfiles
+git clone https://github.com/TheMartes/dotfiles .files
+
 # Install Packages
 sudo apt-get install --ignore-missing -y ${packagelist[@]}
 
@@ -59,9 +63,9 @@ mkdir $HOME/.themes
 mkdir $HOME/.icons
 
 # Setup tmux config
-sudo apt install tmux
+sudo apt install -y tmux
 rm $HOME/.tmux.conf
-ln -s .tmux.conf $HOME/.tmux.conf
+ln -s $HOME/.files/.tmux.conf $HOME/.tmux.conf
 tmux source-file $HOME/.tmux.conf
 
 echo -e $TEXT_YELLOW
@@ -72,7 +76,7 @@ echo -e $TEXT_RESET
 sudo apt install -y neovim
 git submodule update --init --recursive
 rm -rf $HOME/.config/nvim
-ln -s nvim/ $HOME/.config/nvim
+ln -s $HOME/.files/nvim/ $HOME/.config/nvim
 
 echo -e $TEXT_YELLOW
 echo 'Neovim ready'
@@ -80,15 +84,15 @@ echo -e $TEXT_RESET
 
 # Patch vimproc plugin
 sudo apt -y install gcc && make
-cd nvim/bundle/vimproc.vim && make
-cd ../../../
+cd $HOME/.files/nvim/bundle/vimproc.vim && make
+cd
 
 echo -e $TEXT_YELLOW
 echo 'Vimproc finished'
 echo -e $TEXT_RESET
 
 # Symlink aliases.sh
-ln -s .aliases.sh $HOME/.aliases.sh
+ln -s $HOME/.files/.aliases.sh $HOME/.aliases.sh
 
 echo -e $TEXT_YELLOW
 echo 'Aliases initialized'
@@ -152,7 +156,7 @@ echo -e $TEXT_RESET
 sudo apt install -y zsh curl wget
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh | sed '/\s*env\s\s*zsh\s*/d')"
 rm $HOME/.zshrc
-ln -s .zshrc-linux $HOME/.zshrc
+ln -s $HOME/.files/.zshrc-linux $HOME/.zshrc
 
 echo -e $TEXT_YELLOW
 echo 'ZSH is up and running'

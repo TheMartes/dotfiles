@@ -8,6 +8,11 @@
 3. Symlink all files. (Now you can pull repo for updated and every symlinked file will be changed)
 4. Done
 
+## For automated installation (Works on ubuntu only)
+```shell-script
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/TheMartes/dotfiles/install.sh)"
+```
+
 ### Terminal commands
 ```shell-script
 $ cd ~

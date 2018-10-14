@@ -10,7 +10,7 @@
 
 ## For automated installation (Works on ubuntu only)
 ```shell-script
-sh -c "$(curl -fsSL https://raw.githubusercontent.com/TheMartes/dotfiles/install.sh)"
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/TheMartes/dotfiles/master/install.sh)"
 ```
 
 ### Terminal commands

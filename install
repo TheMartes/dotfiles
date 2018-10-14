@@ -7,6 +7,7 @@ sudo apt update
 sudo apt install -y libnss3-tools \
                         jq \
                         xsel \
+                        php \
                         php-cli \
                         php-common \
                         php-curl \
@@ -18,7 +19,7 @@ sudo apt install -y libnss3-tools \
                         php-zip \
                         mysql-server \
                         python3 \
-                        mysqk-workbench
+                        mysql-workbench
 
 # Install snap packages
 sudo snap install spotify \
@@ -26,7 +27,7 @@ sudo snap install spotify \
              redis-desktop-manager \
              gitkraken \
              chromium \
-             postman 
+             postman
 
 # Install Snap package with --classic argument
 sudo snap install --classic go \

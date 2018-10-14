@@ -37,7 +37,7 @@ sudo apt install gcc && make
 ```
 Remember that the APT package manager will work only on ubuntu and debian, so according to your operating system you'll need to use your package manager like `dnf`, `pacman` or `brew`  
 
-If you have the package already install then go into the vimproc directory and run `make`. Or enter following command
+If you have the package already installed then go into vimproc directory and run `make`. Or enter following command
 ```
 cd $HOME/.files/nvim/bundle/vimproc.vim && make
 ```

@@ -43,13 +43,13 @@ ln -s .tmux.conf $HOME/.tmux.conf
 tmux source-file $HOME/.tmux.conf
 
 # Setup neoVIM
-sudo apt install neovim
+sudo -y apt install neovim
 git submodule update --init --recursive
 rm -rf $HOME/.config/nvim
 ln -s nvim/ $HOME/.config/nvim
 
 # Patch vimproc plugin
-sudo apt install gcc && make
+sudo apt -y install gcc && make
 cd nvim/bundle/vimproc.vim && make
 cd ../../../
 
@@ -57,8 +57,8 @@ cd ../../../
 ln -s .aliases.sh $HOME/.aliases.sh
 
 # Install Docker
-sudo apt remove docker docker-engine docker.io
-sudo apt install apt-transport-https \
+sudo apt -y remove docker docker-engine docker.io
+sudo apt -y install apt-transport-https \
         	ca-certificates \
             curl \
             software-properties-common
@@ -68,7 +68,7 @@ sudo add-apt-repository "deb [arch=amd64] https://download.docker.com/linux/ubun
       					$(lsb_release -cs) \
          				stable"
 sudo apt update
-sudo apt install docker-ce
+sudo apt -y install docker-ce
 
 # Install composer
 php -r "copy('https://getcomposer.org/installer', 'composer-setup.php');"
@@ -88,10 +88,10 @@ valet start
 composer global require "laravel/installer"
 
 # Install NodeJS & Dependencies
-sudo apt install nodejs && npm
+sudo apt install -y nodejs && npm
 
 # Setup Oh My Z-Shell
-sudo apt install zsh curl wget
+sudo apt install -y zsh curl wget
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
 rm $HOME/.zshrc
 ln -s .zshrc-linux $HOME/.zshrc

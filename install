@@ -25,6 +25,7 @@ packagelist=(
     php-zip
     mysql-server
     python3
+    golang
     mysql-workbench
 )
 

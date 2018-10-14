@@ -163,6 +163,16 @@ echo -e $TEXT_YELLOW
 echo 'ZSH is up and running'
 echo -e $TEXT_RESET
 
+# Setup PIP
+curl https://bootstrap.pypa.io/get-pip.py -o get-pip.py
+python2 get-pip.py
+
+# Angular, React and Vue
+sudo npm install -g @angular/cli
+sudo npm install -g create-react-app
+sudo npm install -g @vue/cli
+
+
 echo '########################################################'
 echo '########################################################'
 echo '####                                                ####'

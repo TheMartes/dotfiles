@@ -15,6 +15,9 @@ chmod +x install
 ./install
 ```
 
+## Manual Installation
+Clone the repo as `.files` directory into your home folder
+
 ### Terminal commands
 ```shell-script
 $ cd ~

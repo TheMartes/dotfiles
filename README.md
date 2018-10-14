@@ -20,6 +20,16 @@ $ ln -s $HOME/.files/nvim/ $HOME/.config/nvim
 $ ln -s $HOME/.files/.zshrc $HOME/.zshrc
 ```
 
+### Reload Tmux with new config file
+```
+tmux source-file $HOME/.tmux.conf
+```
+
+### Pull all Submodules (ONLY IF YOU NEED IT)
+```
+git submodule update --init --recursive
+```
+
 ***
 ## Apps
 ### Development

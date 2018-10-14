@@ -1,0 +1,24 @@
+# If you come from bash you might have to change your $PATH.
+export PATH=$HOME/bin:/usr/local/bin:$PATH
+export PATH=$HOME/.config/composer/vendor/bin:$PATH
+
+# Path to your oh-my-zsh installation.
+  export ZSH="/home/martes/.oh-my-zsh"
+
+# Theme
+ZSH_THEME="robbyrussell"
+
+# Misc
+DISABLE_AUTO_UPDATE="true"
+DISABLE_LS_COLORS="false"
+DISABLE_UNTRACKED_FILES_DIRTY="false"
+
+# Plugins
+plugins=(
+  git
+)
+
+source $ZSH/oh-my-zsh.sh
+
+# User configuration
+source $HOME/.aliases.sh

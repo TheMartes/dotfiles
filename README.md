@@ -1,4 +1,4 @@
-<h1 align="center">🔥 macOS dotfiles 🔥</h1>
+<h1 align="center">🔥 .files 🔥</h1>
 
 ![dotfiles](https://i.imgur.com/z1D20AT.png)
 

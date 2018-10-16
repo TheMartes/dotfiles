@@ -64,3 +64,6 @@
 [submodule "nvim/bundle/discord.nvim"]
 	path = nvim/bundle/discord.nvim
 	url = https://github.com/aurieh/discord.nvim
+[submodule "nvim/bundle/Dockerfile.vim"]
+	path = nvim/bundle/Dockerfile.vim
+	url = https://github.com/ekalinin/Dockerfile.vim

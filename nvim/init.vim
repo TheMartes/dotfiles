@@ -14,7 +14,8 @@ set scrolloff=10
 let g:dracula_italic = 0
 let g:dracula_colorterm = 0
 highlight Normal ctermbg=None
-colorscheme dracula
+set termguicolors
+colorscheme gooey
 
 " Vim status line
 if !has('gui_running')

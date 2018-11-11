@@ -17,6 +17,10 @@ highlight Normal ctermbg=None
 set termguicolors
 colorscheme gooey
 
+" HTML Emmet Bind
+let g:user_emmet_expandabbr_key='<Tab>'
+imap <expr> <tab> emmet#expandAbbrIntelligent("\<tab>")
+
 " Vim status line
 if !has('gui_running')
   set t_Co=256
@@ -26,7 +30,7 @@ set laststatus=2
 
 " VIM Lightline theme
 let g:lightline = {
-      \ 'colorscheme': 'Dracula',
+      \ 'colorscheme': 'one',
       \ 'active': {
       \   'left': [ [ 'mode', 'paste' ],
       \             [ 'gitbranch', 'readonly', 'filename', 'modified' ] ]

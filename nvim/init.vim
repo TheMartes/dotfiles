@@ -4,18 +4,16 @@ call pathogen#helptags()
 syntax on
 set number relativenumber
 set noswapfile
-set noshowmode
 set expandtab
 set tabstop=4 softtabstop=0 expandtab shiftwidth=4 smarttab
 set encoding=utf8
-set guifont=Hack_Nerd_Font:h12
+set guifont=Pragmata_Pro_Mono:h12
 set laststatus=2
 set scrolloff=10
-let g:dracula_italic = 0
-let g:dracula_colorterm = 0
+set t_Co=256 
 highlight Normal ctermbg=None
-set termguicolors
-colorscheme gooey
+set background=light
+colorscheme PaperColor
 
 " HTML Emmet Bind
 let g:user_emmet_expandabbr_key='<Tab>'
@@ -37,19 +35,6 @@ if !has('gui_running')
 endif
 set laststatus=2
 
-
-" VIM Lightline theme
-let g:lightline = {
-      \ 'colorscheme': 'one',
-      \ 'active': {
-      \   'left': [ [ 'mode', 'paste' ],
-      \             [ 'gitbranch', 'readonly', 'filename', 'modified' ] ]
-      \ },
-      \ 'component_function': {
-      \   'gitbranch': 'fugitive#head'
-      \ },
-      \ }
-
 " Keybinds
 map <C-n> :NERDTreeToggle<CR>
 nmap <F8> :TagbarToggle<CR>
@@ -59,6 +44,12 @@ let g:ctrlp_custom_ignore = 'node_modules\|DS_Store\|git'
 let g:rainbow_active = 1 
 let g:nette_deprecated = 0
 let g:php_syntax_extensions_enabled = 1
+let g:python3_host_prog = '/usr/local/bin/python3'
+
+" Syntastic
+let g:syntastic_php_checkers=['php', 'phpcs']
+let g:syntastic_php_phpcs_args='--standard=PSR2 -n'
+
 "
 " PHP CodeSniffer for PSR@2
 "

@@ -47,7 +47,7 @@ let g:php_syntax_extensions_enabled = 1
 let g:python3_host_prog = '/usr/local/bin/python3'
 
 " Syntastic
-let g:syntastic_php_checkers=['php', 'phpcs']
+let g:syntastic_php_checkers = ['php', 'phpcs', 'phpmd']
 let g:syntastic_php_phpcs_args='--standard=PSR2 -n'
 
 "

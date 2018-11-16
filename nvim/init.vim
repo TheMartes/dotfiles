@@ -1,6 +1,6 @@
 "--- Latest NeoVIM Changes
 set nocompatible  
-so ~/.files/nvim/init.vim
+"so ~/.files/nvim/init.vim
 
 "--- Pathogen Plugin Manager Init
 execute pathogen#infect()
@@ -39,6 +39,14 @@ inoremap <up>    <nop>
 inoremap <down>  <nop>
 inoremap <left>  <nop>
 inoremap <right> <nop>
+
+"--- PHP Namespace completion
+function! IPhpInsertUse()
+    call PhpInsertUse()
+    call feedkeys('a',  'n')
+endfunction
+autocmd FileType php inoremap <Leader>u <Esc>:call IPhpInsertUse()<CR>
+autocmd FileType php noremap <Leader>u :call PhpInsertUse()<CR>
 
 
 "--- NerdTree

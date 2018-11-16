@@ -18,12 +18,28 @@ set encoding=utf8
 set guifont=Pragmata_Pro_Mono:h12
 set laststatus=2
 set scrolloff=10
-set t_Co=256 
+set t_Co=256
 highlight Normal ctermbg=None
 
+"--- Easier split pane navigation
+nmap <C-h> <C-w>h
+nmap <C-j> <C-w>j
+nmap <C-k> <C-w>k
+nmap <C-l> <C-w>l
+
+if (empty($TMUX))
+  if (has("nvim"))
+     let $NVIM_TUI_ENABLE_TRUE_COLOR=1
+  endif
+  if (has("termguicolors"))
+    set termguicolors
+  endif
+endif
+
 "---ColorTheme
-set background=light
-colorscheme PaperColor
+let g:onedark_termcolors=16
+set background=dark
+colorscheme onedark
 
 "--- HTML Emmet Bind
 "let g:user_emmet_expandabbr_key='<Tab>'
@@ -132,3 +148,4 @@ augroup phpSyntaxOverride
   autocmd!
   autocmd FileType php call PhpSyntaxOverride()
 augroup END
+

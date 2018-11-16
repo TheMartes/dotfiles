@@ -13,9 +13,6 @@ eval $(thefuck --alias)
 # Theme
 # ZSH_THEME="sobole"
 
-# FPATH
-# fpath=( "$HOME/.zfunctions" $fpath )
-
 # Random Theme
 # ZSH_THEME_RANDOM_CANDIDATES=( "robbyrussell" "agnoster" )
 

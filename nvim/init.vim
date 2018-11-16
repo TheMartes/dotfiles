@@ -1,6 +1,5 @@
 "--- Latest NeoVIM Changes
 set nocompatible  
-"so ~/.files/nvim/init.vim
 
 "--- Pathogen Plugin Manager Init
 execute pathogen#infect()
@@ -118,3 +117,18 @@ nnoremap tt  :tabedit<Space>
 nnoremap tn  :tabnext<Space>
 nnoremap tm  :tabm<Space>
 nnoremap td  :tabclose<CR>
+
+"--- Fix PSR-2 on save
+autocmd BufWritePost *.php silent! call PhpCsFixerFixFile()
+
+"--- PHP Syntax Override by package php.vim
+
+function! PhpSyntaxOverride()
+  hi! link phpDocTags phpDefine
+  hi! link phpDocParam phpType
+endfunction
+
+augroup phpSyntaxOverride
+  autocmd!
+  autocmd FileType php call PhpSyntaxOverride()
+augroup END

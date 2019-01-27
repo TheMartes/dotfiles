@@ -13,9 +13,24 @@
 [submodule "nvim/bundle/emmet-vim"]
 	path = nvim/bundle/emmet-vim
 	url = https://github.com/mattn/emmet-vim
+[submodule "nvim/bundle/UltiSnips"]
+	path = nvim/bundle/UltiSnips
+	url = https://github.com/SirVer/ultisnips
+[submodule "nvim/bundle/ag.vim"]
+	path = nvim/bundle/ag.vim
+	url = https://github.com/rking/ag.vim
+[submodule "nvim/bundle/tlib_vim"]
+	path = nvim/bundle/tlib_vim
+	url = https://github.com/tomtom/tlib_vim
+[submodule "nvim/bundle/vim-addon-mw-utils"]
+	path = nvim/bundle/vim-addon-mw-utils
+	url = https://github.com/MarcWeber/vim-addon-mw-utils 
 [submodule "nvim/bundle/ferret"]
 	path = nvim/bundle/ferret
 	url = https://github.com/wincent/ferret.git
+[submodule "nvim/bundle/vim-vinegar"]
+	path = nvim/bundle/vim-vinegar
+	url = https://github.com/tpope/vim-vinegar
 [submodule "nvim/bundle/lightline.vim"]
 	path = nvim/bundle/lightline.vim
 	url = https://github.com/itchyny/lightline.vim

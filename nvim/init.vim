@@ -39,7 +39,7 @@ endif
 "---ColorTheme
 let g:onedark_termcolors=16
 set background=dark
-colorscheme onedark
+colorscheme dracula
 
 "--- HTML Emmet Bind
 "let g:user_emmet_expandabbr_key='<Tab>'

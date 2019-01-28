@@ -19,3 +19,14 @@ git config --global user.email "$GIT_AUTHOR_EMAIL"
 # See: https://github.com/pindexis/qfc
 [[ -s "$HOME/.qfc/bin/qfc.sh" ]] && source "$HOME/.qfc/bin/qfc.sh"
 
+# https://github.com/git/git/blob/master/contrib/completion/git-completion.bash
+source ~/bin/git-completion.bash
+# https://github.com/git/git/blob/master/contrib/completion/git-prompt.sh
+source ~/bin/git-prompt.sh
+
+# Take Command
+function take() {
+  mkdir "$1"
+  cd "$1"
+}
+

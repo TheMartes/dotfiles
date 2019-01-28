@@ -4,6 +4,10 @@ alias c="clear"
 alias l="ls -oh"
 alias la="ls -oAh"
 alias v="nvim "
+alias cat="bat "
+alias bash_reload="source $HOME/.bashrc"
+alias weather='curl -4 http://wttr.in/Trnava'
+#alias take="mkdir $1 && cd !*"
 
 #Laravel
 alias art="php artisan"

@@ -75,4 +75,8 @@ cd $HOME/.files/nvim/bundle/vimproc.vim && make
 + [Transmit](https://panic.com/transmit/) as my primary FTP Client
 + To be more productive on mac, i can't stand out Spotlight and Default App Switcher (Alt + Tab), So i investigated a quick research, and i'm pretty happy with [Alfred](https://www.alfredapp.com/) and [Contexts](https://contexts.co/)
 
+### Slack Darkmode for macOS
+```
+echo 'document.addEventListener("DOMContentLoaded", function() {$.ajax({url: "https://cdn.rawgit.com/laCour/slack-night-mode/master/css/raw/black.css",success: function(css) {let overrides = "code { background-color: #535353; color: #85c5ff; } .c-mrkdwn__pre, .c-mrkdwn__quote { background: #535353 !important; background-color: #535353 !important; }"; $("<style></style>").appendTo("head").html(css + overrides);}});});' | sudo tee -a /Applications/Slack.app/Contents/Resources/app.asar.unpacked/src/static/ssb-interop.js
 
+```

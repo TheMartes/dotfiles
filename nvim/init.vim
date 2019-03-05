@@ -1,4 +1,4 @@
-"--- Latest NeoVIM Changes
+"::-- Latest NeoVIM Changes
 set nocompatible  
 
 "--- Pathogen Plugin Manager Init
@@ -7,6 +7,10 @@ call pathogen#helptags()
 
 "--- Backspace behavior like in any other editor
 set backspace=indent,eol,start 
+
+"--- Render Whitespaces
+set listchars=eol:$,tab:>-,trail:~,extends:>,precedes:<
+set list
 
 "--- Setters
 syntax on
@@ -27,19 +31,15 @@ nmap <C-j> <C-w>j
 nmap <C-k> <C-w>k
 nmap <C-l> <C-w>l
 
-if (empty($TMUX))
-  if (has("nvim"))
-     let $NVIM_TUI_ENABLE_TRUE_COLOR=1
-  endif
-  if (has("termguicolors"))
-    set termguicolors
-  endif
-endif
 
 "---ColorTheme
-let g:onedark_termcolors=16
-set background=dark
-colorscheme dracula
+ let g:dracula_italic = 0
+ colorscheme dracula
+ highlight Normal ctermbg=None
+
+ if (has("termguicolors"))
+   set termguicolors
+ endif
 
 "--- HTML Emmet Bind
 "let g:user_emmet_expandabbr_key='<Tab>'
@@ -83,7 +83,7 @@ let g:nette_deprecated = 0
 let g:php_syntax_extensions_enabled = 1
 
 "--- Python Settings
-let g:python3_host_prog = '/usr/bin/python3'
+let g:python3_host_prog = '/usr/local/bin/python3'
 
 "--- Split View Defaults
 set splitbelow

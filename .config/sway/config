@@ -44,7 +44,7 @@ bar {
 # GTK Theme
 set $gnome-schema org.gnome.desktop.interface
 
-default_border normal 0
+default_border none
 
 exec_always {
     gsettings set $gnome-schema gtk-theme 'Arc-Dark'

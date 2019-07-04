@@ -91,6 +91,3 @@
 [submodule "nvim/bundle/vim-php-namespace"]
 	path = nvim/bundle/vim-php-namespace
 	url = https://github.com/arnaud-lb/vim-php-namespace
-[submodule ".config/bin/git"]
-	path = .config/bin/git
-	url = https://github.com/git/git

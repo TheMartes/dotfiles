@@ -15,14 +15,10 @@ GIT_AUTHOR_EMAIL="matt.buncek@gmail.com"
 GIT_COMMITTER_EMAIL="$GIT_AUTHOR_EMAIL"
 git config --global user.email "$GIT_AUTHOR_EMAIL"
 
-# Init qfc
-# See: https://github.com/pindexis/qfc
-[[ -s "$HOME/.qfc/bin/qfc.sh" ]] && source "$HOME/.qfc/bin/qfc.sh"
-
 # https://github.com/git/git/blob/master/contrib/completion/git-completion.bash
-source ~/bin/git-completion.bash
+source ~/.config/bin/git-completion.bash
 # https://github.com/git/git/blob/master/contrib/completion/git-prompt.sh
-source ~/bin/git-prompt.sh
+source ~/.config/bin/git-prompt.sh
 
 # Take Command
 function take() {

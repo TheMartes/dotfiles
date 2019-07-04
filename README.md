@@ -27,7 +27,7 @@ tmux source-file $HOME/.tmux.conf
 And you're done. Also i recommend to install all of these dependencies to make it work properly. (Again this is supposed to work only on arch & swaywm)
 ```
 $ sudo pacman -S swaylock grim rofi slurp xclip waybar arc-gtk-theme neovim tmux bat termite
-$ yay rofimoji-git
+$ yay rofimoji-git mako-git
 ```
 Make sure `yay` is installed, otherwise replace it with any other AUR helper.
 

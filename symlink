@@ -5,6 +5,7 @@ ln -s ~/.files/.config/bin ~/.config/bin
 ln -s ~/.files/.config/gtk-3.0 ~/.config/gtk-3.0
 ln -s ~/.files/.config/rofi ~/.config/rofi
 ln -s ~/.files/.config/nvim ~/.config/nvim
+ln -s ~/.files/.config/mako ~/.config/mako
 ln -s ~/.files/.config/sway ~/.config/sway
 ln -s ~/.files/.config/termite ~/.config/termite
 ln -s ~/.files/.config/waybar ~/.config/waybar

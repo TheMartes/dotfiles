@@ -33,18 +33,19 @@ gaps inner 10
 bindsym $mod+Print 	exec grim -t png -c ~/Pictures/screenshot.png
 bindsym Print 		exec slurp | grim -g - - | xclip -i -selection c -t image/png
 
-# Swalock
-bindsym Pause      exec lockscreen
+# Swaylock
+bindsym Pause exec ~/.config/bin/lockscreen
 
 # Waybar
 bar {
     swaybar_command waybar
 }
 
+# Remove borders
+default_border none
+
 # GTK Theme
 set $gnome-schema org.gnome.desktop.interface
-
-default_border none
 
 exec_always {
     gsettings set $gnome-schema gtk-theme 'Arc-Dark'

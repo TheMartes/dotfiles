@@ -1,56 +1,31 @@
-<h1 align="center">🔥 .files 🔥</h1>
+<h1 align="center">~/.files</h1>
 
 ![dotfiles](https://i.imgur.com/wlOwIWI.png)
 
-## Config files installation
-1. Clone repo into your $HOME and name it .files
-2. Make sure you have Fish shell and OH-MY-FISH installed
-3. Symlink all files. (Now you can pull repo for updated and every symlinked file will be changed)
-4. Done
-
-## For automated installation (Works on ubuntu only)
+## Clone Repo
 ```shell-script
-wget https://raw.githubusercontent.com/TheMartes/dotfiles/master/install 
-chmod +x install
-./install
+$ cd && git clone https://github.com/TheMartes/dotfiles .files
 ```
 
-## Manual Installation
-Clone the repo as `.files` directory into your home folder
-
-### Terminal commands
+### To Symlink all files run
+Be careful. This will work only if folder is located `$HOME` like so `~/.files/`
 ```shell-script
-$ cd ~
-$ git clone https://github.com/TheMartes/dotfiles .files
-$ ln -s $HOME/.files/.aliases.sh $HOME/.aliases.sh
-$ ln -s $HOME/.files/.tmux.conf $HOME/.tmux.conf
-$ ln -s $HOME/.files/fish/ $HOME/.config/fish
-$ ln -s $HOME/.files/omf/ $HOME/.config/omf
-$ ln -s $HOME/.files/nvim/ $HOME/.config/nvim
-$ ln -s $HOME/.files/.zshrc $HOME/.zshrc
+$ cd ~/.files && ./symlink
 ```
+
+This will also do update all submodules from repository
 
 ### Reload Tmux with new config file
 ```
 tmux source-file $HOME/.tmux.conf
 ```
 
-### Pull all Submodules (ONLY IF YOU NEED IT)
+And you're done. Also i recommend to install all of these dependencies to make it work properly. (Again this is supposed to work only on arch & swaywm)
 ```
-git submodule update --init --recursive
+$ sudo pacman -S swaylock grim rofi slurp xclip waybar arc-gtk-theme neovim tmux bat termite
+$ yay rofimoji-git
 ```
-
-### Update VIMProc for your system
-If you're on ubuntu you will need following packages
-```
-sudo apt install gcc && make
-```
-Remember that the APT package manager will work only on ubuntu and debian, so according to your operating system you'll need to use your package manager like `dnf`, `pacman` or `brew`  
-
-If you have the package already installed then go into vimproc directory and run `make`. Or enter following command
-```
-cd $HOME/.files/nvim/bundle/vimproc.vim && make
-```
+Make sure `yay` is installed, otherwise replace it with any other AUR helper.
 
 ***
 ## Apps

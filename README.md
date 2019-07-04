@@ -1,6 +1,6 @@
 <h1 align="center">🔥 .files 🔥</h1>
 
-![dotfiles](https://i.imgur.com/bIjX1WE.png)
+![dotfiles](https://i.imgur.com/wlOwIWI.png)
 
 ## Config files installation
 1. Clone repo into your $HOME and name it .files

@@ -27,3 +27,6 @@ ln -s ~/.files/.bash_prompt ~/.bash_prompt
 ln -s ~/.files/.bashrc ~/.bashrc
 ln -s ~/.files/.tmux.conf ~/.tmux.conf
 ln -s ~/.files/.zshrc ~/.zshrc
+
+# Updates all submodules
+cd ~/.files && git submodule update --init --recursive

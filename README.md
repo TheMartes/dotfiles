@@ -7,6 +7,10 @@
 $ cd && git clone https://github.com/TheMartes/dotfiles .files
 ```
 
+## Script Installation
+`./install_script`
+
+## Manual Installation
 ### To Symlink all files run
 Be careful. This will work only if folder is located `$HOME` like so `~/.files/`
 ```shell-script

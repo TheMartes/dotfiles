@@ -24,6 +24,7 @@ window#waybar {
 #clock {
 	padding: 0 10px;
 	background: #4FD1C5;
+    color: white;
 }
 
 #custom-spotify {

@@ -9,7 +9,7 @@
 
     "modules-left": ["sway/workspaces", "sway/mode"],
     "modules-center": ["sway/window"],
-    "modules-right": ["clock"],
+    "modules-right": ["custom/spotify", "clock"],
 
     "sway/window": {
         "max-length": 50
@@ -17,5 +17,13 @@
 
     "clock": {
         "format-alt": "{:%a, %d. %b  %H:%M}"
+    },
+
+    "custom/spotify": {
+        "interval": 1,
+        "return-type": "json",
+        "exec": "~/.config/waybar/modules/spotify.sh",
+        "exec-if": "pgrep spotify",
+        "escape": true
     }
 }

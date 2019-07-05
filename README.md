@@ -1,6 +1,6 @@
 <h1 align="center">~/.files</h1>
 
-![dotfiles](https://i.imgur.com/wlOwIWI.png)
+![dotfiles](https://i.imgur.com/A7M1jLl.png)
 
 ## Clone Repo
 ```shell-script

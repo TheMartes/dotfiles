@@ -23,6 +23,12 @@ window#waybar {
 
 #clock {
 	padding: 0 10px;
-	background: #0ecc86;
+	background: #4FD1C5;
+}
+
+#custom-spotify {
+    padding: 0 10px;
+    background: #B2F5EA;
+    color: black;
 }
 

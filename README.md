@@ -36,7 +36,7 @@ Make sure `yay` is installed, otherwise replace it with any other AUR helper.
 ### Development
 + **Editor:** NeoVIM. Really loving it. [Here you have number of reasons why you should use NeoVIM instead of VIM](https://www.youtube.com/watch?v=LRQGAnPtNdM)
 + **Terminal:** [Termite](https://wiki.archlinux.org/index.php/Termite) + tmux [with my config files](https://github.com/TheMartes/dotfiles/blob/master/.tmux.conf).
-+ **Database Client:** CLI + [MySQL Workbench]https://www.mysql.com/products/workbench/).
++ **Database Client:** CLI + [MySQL Workbench](https://www.mysql.com/products/workbench/).
 + **API Testing** is provided by [Insomnia](https://insomnia.rest/)
 + **Dev Environmet** are managed by [Docker](https://www.docker.com/)
 + **GIT:** CLI driven :)

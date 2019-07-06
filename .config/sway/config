@@ -41,6 +41,10 @@ bar {
     swaybar_command waybar
 }
 
+# Colors                Border  Backgr. Text    Indicator Cchild_border
+client.focused          #4FD1C5 #4FD1C5 #ffffff #2e9ef4   #285577
+client.focused_inactive #319795 #319795 #ffffff #2e9ef4   #285577
+
 # Remove borders
 default_border none
 

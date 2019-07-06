@@ -35,23 +35,22 @@ Make sure `yay` is installed, otherwise replace it with any other AUR helper.
 ## Apps
 ### Development
 + **Editor:** NeoVIM. Really loving it. [Here you have number of reasons why you should use NeoVIM instead of VIM](https://www.youtube.com/watch?v=LRQGAnPtNdM)
-+ **Terminal:** [iTerm2](https://iterm2.com/) + tmux [with my config files](https://github.com/TheMartes/dotfiles/blob/master/.tmux.conf).
-+ **Database Client:** [SequelPro](https://sequelpro.com/), probably most awesome MySQL Client for mac. For redis i'm using [Medis](http://getmedis.com/)
-+ **API Testing** is delivered by [Postman](https://www.getpostman.com/)
-+ **Containers** are managed by [Docker](https://www.docker.com/), and [Valet](https://laravel.com/docs/5.5/valet) for localhost
++ **Terminal:** [Termite](https://wiki.archlinux.org/index.php/Termite) + tmux [with my config files](https://github.com/TheMartes/dotfiles/blob/master/.tmux.conf).
++ **Database Client:** CLI + [MySQL Workbench]https://www.mysql.com/products/workbench/).
++ **API Testing** is provided by [Insomnia](https://insomnia.rest/)
++ **Dev Environmet** are managed by [Docker](https://www.docker.com/)
 + **GIT:** CLI driven :)
 
 ### Other tools
 + For music i'm using [Spotify](https://www.spotify.com/)
-+ Email client is [Spark](https://sparkmailapp.com/)
-+ Browser of choice is [Google Chrome](https://www.google.com/chrome/index.html)
-+ For communication i'm using [Discord](https://discordapp.com/), [Slack](https://slack.com/) & [Telegram](https://telegram.org/)
++ Email client is [MailSpring](https://getmailspring.com/)
++ Browser of choice is [Mozilla Firefox](https://www.mozilla.org/en-US/firefox/new/)
++ For communication i'm using [Discord](https://discordapp.com/) & [Slack](https://slack.com/)
 + Note taking app of choice is [Simplenote](https://simplenote.com/)
-+ [Google Keep](https://keep.google.com/) for staying organized.
-+ For Office i used to use [Google Docs](docs.google.com), since it's free and awesome, but for more complex work with documents i'm using [MS Office](https://products.office.com/)
-+ Speaking of documents, for markdown is best [MacDown](http://macdown.uranusjr.com/)
-+ My files are safe in [Dropbox](https://www.dropbox.com/)
-+ [Transmit](https://panic.com/transmit/) as my primary FTP Client
-+ To be more productive on mac, i can't stand out Spotlight and Default App Switcher (Alt + Tab), So i investigated a quick research, and i'm pretty happy with [Alfred](https://www.alfredapp.com/) and [Contexts](https://contexts.co/)
++ [Microsoft To-Do](https://to-do.microsoft.com/en-us) for staying organized.
++ For Office i used to use [Google Docs](docs.google.com), since it's free and awesome.
++ Markdown is done in [VSCode](https://code.visualstudio.com/), which i'm using as my secondary editor.
+And at the end, I'm keeping most of my files in [Google Drive](https://drive.google.com).
+
 
 

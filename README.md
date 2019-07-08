@@ -1,79 +1,57 @@
-<h1 align="center">🔥 .files 🔥</h1>
+<h1 align="center">~/.files</h1>
 
-![dotfiles](https://i.imgur.com/z1D20AT.png)
+![dotfiles](https://i.imgur.com/A7M1jLl.png)
 
-## Config files installation
-1. Clone repo into your $HOME and name it .files
-2. Make sure you have Fish shell and OH-MY-FISH installed
-3. Symlink all files. (Now you can pull repo for updated and every symlinked file will be changed)
-4. Done
-
-## For automated installation (Works on ubuntu only)
+## Clone Repo
 ```shell-script
-wget https://raw.githubusercontent.com/TheMartes/dotfiles/master/install 
-chmod +x install
-./install
+$ cd && git clone https://github.com/TheMartes/dotfiles .files
 ```
+
+## Script Installation
+`./install_script`
 
 ## Manual Installation
-Clone the repo as `.files` directory into your home folder
-
-### Terminal commands
+### To Symlink all files run
+Be careful. This will work only if folder is located `$HOME` like so `~/.files/`
 ```shell-script
-$ cd ~
-$ git clone https://github.com/TheMartes/dotfiles .files
-$ ln -s $HOME/.files/.aliases.sh $HOME/.aliases.sh
-$ ln -s $HOME/.files/.tmux.conf $HOME/.tmux.conf
-$ ln -s $HOME/.files/fish/ $HOME/.config/fish
-$ ln -s $HOME/.files/omf/ $HOME/.config/omf
-$ ln -s $HOME/.files/nvim/ $HOME/.config/nvim
-$ ln -s $HOME/.files/.zshrc $HOME/.zshrc
+$ cd ~/.files && ./symlink
 ```
+
+This will also do update all submodules from repository
 
 ### Reload Tmux with new config file
 ```
 tmux source-file $HOME/.tmux.conf
 ```
 
-### Pull all Submodules (ONLY IF YOU NEED IT)
+And you're done. Also i recommend to install all of these dependencies to make it work properly. (Again this is supposed to work only on arch & swaywm)
 ```
-git submodule update --init --recursive
+$ sudo pacman -S swaylock grim rofi slurp xclip waybar arc-gtk-theme neovim tmux bat termite
+$ yay rofimoji-git mako-git
 ```
-
-### Update VIMProc for your system
-If you're on ubuntu you will need following packages
-```
-sudo apt install gcc && make
-```
-Remember that the APT package manager will work only on ubuntu and debian, so according to your operating system you'll need to use your package manager like `dnf`, `pacman` or `brew`  
-
-If you have the package already installed then go into vimproc directory and run `make`. Or enter following command
-```
-cd $HOME/.files/nvim/bundle/vimproc.vim && make
-```
+Make sure `yay` is installed, otherwise replace it with any other AUR helper.
 
 ***
 ## Apps
 ### Development
 + **Editor:** NeoVIM. Really loving it. [Here you have number of reasons why you should use NeoVIM instead of VIM](https://www.youtube.com/watch?v=LRQGAnPtNdM)
-+ **Terminal:** [iTerm2](https://iterm2.com/) + tmux [with my config files](https://github.com/TheMartes/dotfiles/blob/master/.tmux.conf).
-+ **Database Client:** [SequelPro](https://sequelpro.com/), probably most awesome MySQL Client for mac. For redis i'm using [Medis](http://getmedis.com/)
-+ **API Testing** is delivered by [Postman](https://www.getpostman.com/)
-+ **Containers** are managed by [Docker](https://www.docker.com/), and [Valet](https://laravel.com/docs/5.5/valet) for localhost
++ **Terminal:** [Termite](https://wiki.archlinux.org/index.php/Termite) + tmux [with my config files](https://github.com/TheMartes/dotfiles/blob/master/.tmux.conf).
++ **Database Client:** CLI + [MySQL Workbench](https://www.mysql.com/products/workbench/).
++ **API Testing** is provided by [Insomnia](https://insomnia.rest/)
++ **Dev Environmet** are managed by [Docker](https://www.docker.com/)
 + **GIT:** CLI driven :)
 
 ### Other tools
 + For music i'm using [Spotify](https://www.spotify.com/)
-+ Email client is [Spark](https://sparkmailapp.com/)
-+ Browser of choice is [Google Chrome](https://www.google.com/chrome/index.html)
-+ For communication i'm using [Discord](https://discordapp.com/), [Slack](https://slack.com/) & [Telegram](https://telegram.org/)
++ Email client is [MailSpring](https://getmailspring.com/)
++ Browser of choice is [Mozilla Firefox](https://www.mozilla.org/en-US/firefox/new/)
++ For communication i'm using [Discord](https://discordapp.com/) & [Slack](https://slack.com/)
 + Note taking app of choice is [Simplenote](https://simplenote.com/)
-+ [Google Keep](https://keep.google.com/) for staying organized.
-+ For Office i used to use [Google Docs](docs.google.com), since it's free and awesome, but for more complex work with documents i'm using [MS Office](https://products.office.com/)
-+ Speaking of documents, for markdown is best [MacDown](http://macdown.uranusjr.com/)
-+ My files are safe in [Dropbox](https://www.dropbox.com/)
-+ [Transmit](https://panic.com/transmit/) as my primary FTP Client
-+ To be more productive on mac, i can't stand out Spotlight and Default App Switcher (Alt + Tab), So i investigated a quick research, and i'm pretty happy with [Alfred](https://www.alfredapp.com/) and [Contexts](https://contexts.co/)
++ [Microsoft To-Do](https://to-do.microsoft.com/en-us) for staying organized.
++ For Office i used to use [Google Docs](docs.google.com), since it's free and awesome.
++ Markdown is done in [VSCode](https://code.visualstudio.com/), which i'm using as my secondary editor.
+And at the end, I'm keeping most of my files in [Google Drive](https://drive.google.com).
+
 
 ### Slack Darkmode for macOS
 ```

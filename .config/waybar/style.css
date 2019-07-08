@@ -1,0 +1,35 @@
+* {
+    border: none;
+	border-radius: 0;
+	font-family: 'OpenSans Regular';
+	font-size: 13px;
+}
+
+window#waybar {
+	background: #3b4252;
+	color: #e4e9f0;
+}
+
+#workspaces button {
+	color: #e4e9f0;
+	padding: 3px;
+}
+
+#workspaces button.focused {
+	background: #4a5369;
+	padding-bottom: 1px;
+	border-bottom: 2px solid white
+}
+
+#clock {
+	padding: 0 10px;
+	background: #4FD1C5;
+    color: white;
+}
+
+#custom-spotify {
+    padding: 0 10px;
+    background: #B2F5EA;
+    color: black;
+}
+

@@ -8,10 +8,6 @@ call pathogen#helptags()
 "--- Backspace behavior like in any other editor
 set backspace=indent,eol,start 
 
-"--- Render Whitespaces
-set listchars=eol:$,tab:>-,trail:~,extends:>,precedes:<
-set list
-
 "--- Setters
 syntax on
 set number relativenumber

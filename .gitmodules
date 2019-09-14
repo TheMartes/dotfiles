@@ -91,3 +91,9 @@
 [submodule ".config/nvim/bundle/vim-php-namespace"]
 	path = .config/nvim/bundle/vim-php-namespace
 	url = https://github.com/arnaud-lb/vim-php-namespace
+[submodule "scripts/nord-gnome-terminal"]
+	path = scripts/nord-gnome-terminal
+	url = https://github.com/arcticicestudio/nord-gnome-terminal
+[submodule "scripts/Nordic"]
+	path = scripts/Nordic
+	url = https://github.com/EliverLara/Nordic

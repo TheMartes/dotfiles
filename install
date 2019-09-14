@@ -1,0 +1,33 @@
+#/bin/bash
+
+# Install all dependencies
+pacman -S swaylock grim rofi slurp xclip waybar arc-gtk-theme neovim tmux bat termite
+
+# Install yay
+mkdir ~/Code
+git clone https://aur.archlinux.org/yay.git ~/Code/yay
+cd ~/Code/yay
+makepkg -si
+cd
+
+# Install yay dependencies
+yay rofimoji-git mako-git
+
+# Symlink all files
+ln -s ~/.files/.config/bin ~/.config/bin
+ln -s ~/.files/.config/gtk-3.0 ~/.config/gtk-3.0
+ln -s ~/.files/.config/rofi ~/.config/rofi
+ln -s ~/.files/.config/nvim ~/.config/nvim
+ln -s ~/.files/.config/mako ~/.config/mako
+ln -s ~/.files/.config/sway ~/.config/sway
+ln -s ~/.files/.config/termite ~/.config/termite
+ln -s ~/.files/.config/waybar ~/.config/waybar
+ln -s ~/.files/.aliases.sh ~/.aliases.sh
+ln -s ~/.files/.bash_profile ~/.bash_profile
+ln -s ~/.files/.bash_prompt ~/.bash_prompt
+ln -s ~/.files/.bashrc ~/.bashrc
+ln -s ~/.files/.tmux.conf ~/.tmux.conf
+ln -s ~/.files/.zshrc ~/.zshrc
+
+# Updates all submodules
+cd ~/.files && git submodule update --init --recursive

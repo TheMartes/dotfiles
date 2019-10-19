@@ -2,6 +2,7 @@
 export PATH=$HOME/bin:/usr/local/bin:$PATH
 export PATH=$HOME/.config/composer/vendor/bin:$PATH
 export PATH=$HOME/.config/bin:$PATH
+export PATH=$HOME/.config/diff-so-fancy:$PATH
 
 # Export ZSH
 export ZSH="/home/martes/.oh-my-zsh"
@@ -25,3 +26,5 @@ git config --global user.name "$GIT_AUTHOR_NAME"
 GIT_AUTHOR_EMAIL="matt.buncek@gmail.com"
 GIT_COMMITTER_EMAIL="$GIT_AUTHOR_EMAIL"
 git config --global user.email "$GIT_AUTHOR_EMAIL"
+
+git config --global core.pager "diff-so-fancy | less --tabs=4 -RFX"

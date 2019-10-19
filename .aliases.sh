@@ -7,7 +7,7 @@ alias v="nvim "
 alias cat="bat "
 alias tmux_reload="tmux source-file ~/.tmux.conf"
 alias bash_reload="source $HOME/.bashrc"
-alias weather='curl -4 http://wttr.in/Trnava'
+alias weather='curl -4 http://wttr.in/Prague'
 #alias take="mkdir $1 && cd !*"
 
 #Laravel
@@ -32,7 +32,7 @@ alias crg="composer global require"
 #Git
 alias gi="git init"
 alias ga="git add $1"
-alias gs="git status"
+alias gs="git status -s"
 alias gc="git commit -m $1"
 alias push="git push"
 alias pull="git pull"

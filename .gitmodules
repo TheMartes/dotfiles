@@ -97,3 +97,6 @@
 [submodule "scripts/Nordic"]
 	path = scripts/Nordic
 	url = https://github.com/EliverLara/Nordic
+[submodule ".config/diff-so-fancy"]
+	path = .config/diff-so-fancy
+	url = https://github.com/so-fancy/diff-so-fancy

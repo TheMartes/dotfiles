@@ -1,6 +1,6 @@
 <h1 align="center">~/.files</h1>
 
-![dotfiles](https://i.imgur.com/p8Rb9UJ.png)
+<div style="text-align:center"><img src="https://i.imgur.com/p8Rb9UJ.png" /> </div>
 
 ***
 

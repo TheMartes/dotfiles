@@ -1,60 +1,40 @@
 <h1 align="center">~/.files</h1>
 
-![dotfiles](https://i.imgur.com/A7M1jLl.png)
-
-## Clone Repo
-```shell-script
-$ cd && git clone https://github.com/TheMartes/dotfiles .files
-```
-
-## Script Installation
-`./install_script`
-
-## Manual Installation
-### To Symlink all files run
-Be careful. This will work only if folder is located `$HOME` like so `~/.files/`
-```shell-script
-$ cd ~/.files && ./symlink
-```
-
-This will also do update all submodules from repository
-
-### Reload Tmux with new config file
-```
-tmux source-file $HOME/.tmux.conf
-```
-
-And you're done. Also i recommend to install all of these dependencies to make it work properly. (Again this is supposed to work only on arch & swaywm)
-```
-$ sudo pacman -S swaylock grim rofi slurp xclip waybar arc-gtk-theme neovim tmux bat termite
-$ yay rofimoji-git mako-git
-```
-Make sure `yay` is installed, otherwise replace it with any other AUR helper.
+![dotfiles](https://i.imgur.com/p8Rb9UJ.png)
 
 ***
-## Apps
+
+It's been a wild ride since I started using linux. I started with elementary due to it's look, switched to fedora, to *everyday need to maintain* arch linux and ended up on ubuntu. For Variety of reasons. Better stability, not so often updates, working system, less bugs etc. I'm currently very happy with it and that's important IMO. These dotfiles you can use on any other distro or OS which support unix files system.
+
+***
+# Tools I'm Using
 ### Development
-+ **Editor:** NeoVIM. Really loving it. [Here you have number of reasons why you should use NeoVIM instead of VIM](https://www.youtube.com/watch?v=LRQGAnPtNdM)
-+ **Terminal:** [Termite](https://wiki.archlinux.org/index.php/Termite) + tmux [with my config files](https://github.com/TheMartes/dotfiles/blob/master/.tmux.conf).
-+ **Database Client:** CLI + [MySQL Workbench](https://www.mysql.com/products/workbench/).
++ **Editor and IDE:** 
+    - [VSCode](https://code.visualstudio.com/) 
+    - [PHPStorm](https://www.jetbrains.com/phpstorm/)
++ **Terminal:** Gnome Terminal + tmux [with my config files](https://github.com/TheMartes/dotfiles/blob/master/.tmux.conf).
++ **Database Client:** [DataGrip](https://www.jetbrains.com/datagrip/) By JetBrains.
 + **API Testing** is provided by [Insomnia](https://insomnia.rest/)
-+ **Dev Environmet** are managed by [Docker](https://www.docker.com/)
++ **Dev Environmet** are managed by [Docker](https://www.docker.com/) and [lazydocker](https://github.com/jesseduffield/lazydocker)
 + **GIT:** CLI driven :)
+
+### Terminal Essentials
++ NeoVIM. Really loving it. [Here you have number of reasons why you should use NeoVIM instead of VIM](https://www.youtube.com/watch?v=LRQGAnPtNdM) 
++ ZSH Plugins & Theme
+    - [Autosuggestions](https://github.com/zsh-users/zsh-autosuggestions)
+    - [Oxide Theme](https://github.com/dikiaap/dotfiles/blob/master/.oh-my-zsh/themes/oxide.zsh-theme)
+    - [Syntax Highlighting](https://github.com/zsh-users/zsh-syntax-highlighting)
+
++ [Diff so fancy](https://github.com/so-fancy/diff-so-fancy)
++ [The Fuck](https://github.com/nvbn/thefuck)
++ [Dracula Theme](https://github.com/dracula/gnome-terminal)
 
 ### Other tools
 + For music i'm using [Spotify](https://www.spotify.com/)
 + Email client is [MailSpring](https://getmailspring.com/)
 + Browser of choice is [Mozilla Firefox](https://www.mozilla.org/en-US/firefox/new/)
 + For communication i'm using [Discord](https://discordapp.com/) & [Slack](https://slack.com/)
-+ Note taking app of choice is [Simplenote](https://simplenote.com/)
-+ [Microsoft To-Do](https://to-do.microsoft.com/en-us) for staying organized.
-+ For Office i used to use [Google Docs](docs.google.com), since it's free and awesome.
++ For Staying Organized I'm using [notion](https://notion.so)
++ For Office I used to use [Google Docs](docs.google.com), since it's free and awesome.
 + Markdown is done in [VSCode](https://code.visualstudio.com/), which i'm using as my secondary editor.
 And at the end, I'm keeping most of my files in [Google Drive](https://drive.google.com).
-
-
-### Slack Darkmode for macOS
-```
-echo 'document.addEventListener("DOMContentLoaded", function() {$.ajax({url: "https://cdn.rawgit.com/laCour/slack-night-mode/master/css/raw/black.css",success: function(css) {let overrides = "code { background-color: #535353; color: #85c5ff; } .c-mrkdwn__pre, .c-mrkdwn__quote { background: #535353 !important; background-color: #535353 !important; }"; $("<style></style>").appendTo("head").html(css + overrides);}});});' | sudo tee -a /Applications/Slack.app/Contents/Resources/app.asar.unpacked/src/static/ssb-interop.js
-
-```

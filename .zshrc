@@ -7,10 +7,10 @@ export PATH=$HOME/.config/bin:$PATH
 export ZSH="/home/martes/.oh-my-zsh"
 
 # Set a theme
-ZSH_THEME="robbyrussell"
+ZSH_THEME="oxide"
 
 # Plugins
-plugins=(git)
+plugins=(git zsh-autosuggestions zsh-syntax-highlighting)
 
 # Source zsh
 source $ZSH/oh-my-zsh.sh

@@ -23,11 +23,6 @@ GIT_AUTHOR_EMAIL="matt.buncek@gmail.com"
 GIT_COMMITTER_EMAIL="$GIT_AUTHOR_EMAIL"
 git config --global user.email "$GIT_AUTHOR_EMAIL"
 
-# https://github.com/git/git/blob/master/contrib/completion/git-completion.bash
-source ~/.config/bin/git-completion.bash
-# https://github.com/git/git/blob/master/contrib/completion/git-prompt.sh
-source ~/.config/bin/git-prompt.sh
-
 # Take Command
 function take() {
   mkdir "$1"

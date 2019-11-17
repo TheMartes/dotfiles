@@ -29,4 +29,5 @@ It's been a wild ride since I started using linux. I started with elementary due
 + For Staying Organized I'm using [Google Keep](https://keep.google.com/)
 + For Office I used to use [Google Docs](docs.google.com), since it's free and awesome.
 + Markdown is done in [VSCode](https://code.visualstudio.com/), which i'm using as my secondary editor.
+
 And at the end, I'm keeping most of my files in [Google Drive](https://drive.google.com).

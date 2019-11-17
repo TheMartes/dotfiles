@@ -1,0 +1,43 @@
+[user]
+	name = # YOUR NAME
+	email = # YOUR EMAIL
+	signingkey = # PLEASE FILL THIS WITH YOUR GPG KEY
+[core]
+	whitespace = fix,-indent-with-non-tab,space-before-tab,trailing-space,cr-at-eol
+	autocrlf = input
+	filemode = false
+	excludesfile = ~/.gitignore_global
+	editor = vim
+	attributesfile = ~/.gitattributes
+	pager = less
+
+[pager]
+	log = diff-highlight | less
+	show = diff-highlight | less
+	diff = diff-highlight | less
+	branch = false
+
+[push]
+	default = current
+
+[pull]
+	rebase = true
+
+[commit]
+	gpgsign = true
+
+[status]
+	showStash = true
+
+[rebase]
+	missingCommitsCheck = warn
+	abbreviateCommands = true
+
+[log]
+	decorate = true
+
+[color]
+	branch = auto
+	diff = auto
+	status = auto
+	sh = auto

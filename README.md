@@ -1,40 +1,32 @@
 <h1 align="center">~/.files</h1>
 
-![dotfiles](https://i.imgur.com/VDRxRGz.png)
-
 ***
-
 It's been a wild ride since I started using linux. I started with elementary due to it's look, switched to fedora, to *everyday need to maintain* arch linux and ended up on ubuntu. For Variety of reasons. Better stability, not so often updates, working system, less bugs etc. I'm currently very happy with it and that's important IMO. These dotfiles you can use on any other distro or OS which support unix files system.
-
 ***
+
 # Tools I'm Using
 ### Development
 + **Editor and IDE:** 
-    - [VSCode](https://code.visualstudio.com/) 
+    - [VSCode](https://code.visualstudio.com/) / [NeoVim](https://neovim.io/)
     - [PHPStorm](https://www.jetbrains.com/phpstorm/)
-+ **Terminal:** Gnome Terminal + tmux [with my config files](https://github.com/TheMartes/dotfiles/blob/master/.tmux.conf).
++ **Terminal:** Gnome Terminal
 + **Database Client:** [DataGrip](https://www.jetbrains.com/datagrip/) By JetBrains.
 + **API Testing** is provided by [Insomnia](https://insomnia.rest/)
 + **Dev Environmet** are managed by [Docker](https://www.docker.com/) and [lazydocker](https://github.com/jesseduffield/lazydocker)
-+ **GIT:** CLI driven :)
++ **GIT:** CLI driven :) *ps: gui tools for git are stupid, don't use them*
 
 ### Terminal Essentials
-+ NeoVIM. Really loving it. [Here you have number of reasons why you should use NeoVIM instead of VIM](https://www.youtube.com/watch?v=LRQGAnPtNdM) 
-+ ZSH Plugins & Theme
-    - [Autosuggestions](https://github.com/zsh-users/zsh-autosuggestions)
-    - [Oxide Theme](https://github.com/dikiaap/dotfiles/blob/master/.oh-my-zsh/themes/oxide.zsh-theme)
-    - [Syntax Highlighting](https://github.com/zsh-users/zsh-syntax-highlighting)
-
-+ [Diff so fancy](https://github.com/so-fancy/diff-so-fancy)
-+ [The Fuck](https://github.com/nvbn/thefuck)
-+ [Dracula Theme](https://github.com/dracula/gnome-terminal)
++ NeoVim. Really loving it. [Here you have number of reasons why you should use NeoVim instead of VIM](https://www.youtube.com/watch?v=LRQGAnPtNdM)
++ ZSH Prompt [Oxide](https://github.com/dikiaap/dotfiles/blob/master/.oh-my-zsh/themes/oxide.zsh-theme)
++ [Bat](https://github.com/sharkdp/bat) (Better `cat`)
++ I used to use `tmux`, but it turns out I don't really need it, but I'm occasionally using it.
 
 ### Other tools
 + For music i'm using [Spotify](https://www.spotify.com/)
 + Email client is [MailSpring](https://getmailspring.com/)
-+ Browser of choice is [Mozilla Firefox](https://www.mozilla.org/en-US/firefox/new/)
++ Browser of choice is [Google Chrome](https://www.google.com/chrome/)
 + For communication i'm using [Discord](https://discordapp.com/) & [Slack](https://slack.com/)
-+ For Staying Organized I'm using [notion](https://notion.so)
++ For Staying Organized I'm using [Google Keep](https://keep.google.com/)
 + For Office I used to use [Google Docs](docs.google.com), since it's free and awesome.
 + Markdown is done in [VSCode](https://code.visualstudio.com/), which i'm using as my secondary editor.
 And at the end, I'm keeping most of my files in [Google Drive](https://drive.google.com).

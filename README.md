@@ -9,24 +9,23 @@ It's been a wild ride since I started using linux. I started with elementary due
 + **Editor and IDE:** 
     - [VSCode](https://code.visualstudio.com/) / [NeoVim](https://neovim.io/)
     - [PHPStorm](https://www.jetbrains.com/phpstorm/)
-+ **Terminal:** Gnome Terminal
++ **Terminal:** Tilix
 + **Database Client:** [DataGrip](https://www.jetbrains.com/datagrip/) By JetBrains.
 + **API Testing** is provided by [Insomnia](https://insomnia.rest/)
 + **Dev Environmet** are managed by [Docker](https://www.docker.com/) and [lazydocker](https://github.com/jesseduffield/lazydocker)
-+ **GIT:** CLI driven :) *ps: gui tools for git are stupid, don't use them*
++ **GIT:** CLI driven :) + Sublime Merge *(I like how it shows you which command it will actually execute, that's the only reason i'm using it)*
 
 ### Terminal Essentials
 + NeoVim. Really loving it. [Here you have number of reasons why you should use NeoVim instead of VIM](https://www.youtube.com/watch?v=LRQGAnPtNdM)
-+ ZSH Prompt [Oxide](https://github.com/dikiaap/dotfiles/blob/master/.oh-my-zsh/themes/oxide.zsh-theme)
 + [Bat](https://github.com/sharkdp/bat) (Better `cat`)
 + I used to use `tmux`, but it turns out I don't really need it, but I'm occasionally using it.
 
 ### Other tools
-+ For music i'm using [Spotify](https://www.spotify.com/)
++ For music i'm using [Youtube Music](https://music.youtube.com)
 + Email client is [MailSpring](https://getmailspring.com/)
-+ Browser of choice is [Google Chrome](https://www.google.com/chrome/)
++ Browser of choice is [Firefox](https://www.firefox.com)
 + For communication i'm using [Discord](https://discordapp.com/) & [Slack](https://slack.com/)
-+ For Staying Organized I'm using [Google Keep](https://keep.google.com/)
++ For Staying Organized I'm using [Notion](https://notion.so)
 + For Office I used to use [Google Docs](docs.google.com), since it's free and awesome.
 + Markdown is done in [VSCode](https://code.visualstudio.com/), which i'm using as my secondary editor.
 

@@ -8,7 +8,7 @@ export PATH=$HOME/.config/diff-so-fancy:$PATH
 export ZSH="/home/martes/.oh-my-zsh"
 
 # Set a theme
-ZSH_THEME="oxide"
+ZSH_THEME="robbyrussell"
 
 # Plugins
 plugins=(git)

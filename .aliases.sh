@@ -8,6 +8,7 @@ alias cat="bat "
 alias tmux_reload="tmux source-file ~/.tmux.conf"
 alias bash_reload="source $HOME/.bashrc"
 alias weather='curl -4 http://wttr.in/Prague'
+alias holy_trinity="git submodule update --init --force --recursive"
 #alias take="mkdir $1 && cd !*"
 
 #Laravel

@@ -1,6 +1,39 @@
 "::-- Latest NeoVIM Changes
 set nocompatible  
 
+call plug#begin('~/.files/.config/nvim/plug')
+
+" Plugins
+Plug 'neoclide/coc.nvim', {'branch': 'release'}
+Plug 'rking/ag.vim'
+Plug 'chun-yang/auto-pairs'
+Plug 'tacahiroy/ctrlp-funky'
+Plug 'ctrlpvim/ctrlp.vim'
+Plug 'ekalinin/dockerfile.vim'
+Plug 'joshdick/onedark.vim'
+Plug 'mattn/emmet-vim'
+Plug 'wincent/ferret'
+Plug 'scrooloose/nerdtree'
+Plug 'fpob/nette.vim'
+Plug 'm2mdas/phpcomplete-extended'
+Plug 'scrooloose/syntastic'
+Plug 'majutsushi/tagbar'
+Plug 'tomtom/tlib_vim'
+Plug 'sirver/ultisnips'
+Plug 'marcweber/vim-addon-mw-utils'
+Plug 'jwalton512/vim-blade'
+Plug 'ryanoasis/vim-devicons'
+Plug 'scrooloose/vim-fugitive'
+Plug 'airblade/vim-gitgutter'
+Plug 'guenti/vim-php-cs-fixer'
+Plug 'arnaud-lb/vim-php-namespace'
+Plug 'Shougo/vimproc.vim', {'do' : 'make'}
+Plug 'honza/vim-snippets'
+Plug 'anyakichi/vim-surround'
+Plug 'tpope/vim-vinegar'
+
+call plug#end()
+
 "--- Pathogen Plugin Manager Init
 execute pathogen#infect()
 call pathogen#helptags()
@@ -30,7 +63,7 @@ nmap <C-l> <C-w>l
 
 "---ColorTheme
  let g:dracula_italic = 0
- colorscheme dracula
+ colorscheme onedark
  highlight Normal ctermbg=None
 
  if (has("termguicolors"))

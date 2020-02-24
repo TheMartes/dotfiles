@@ -1,7 +1,0 @@
-tests/*.failed
-tests/*.out
-tests/test.log
-tests/mbyte.vim
-tests/mzscheme.vim
-tests/small.vim
-tests/tiny.vim

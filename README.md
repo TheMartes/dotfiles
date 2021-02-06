@@ -7,26 +7,43 @@ It's been a wild ride since I started using linux. I started with elementary due
 # Tools I'm Using
 ### Development
 + **Editor and IDE:** 
-    - [VSCode](https://code.visualstudio.com/) / [NeoVim](https://neovim.io/)
+    - [VSCode](https://code.visualstudio.com/) / [Vim](https://www.vim.org/) (config compatible with NeoVim tho)
     - [PHPStorm](https://www.jetbrains.com/phpstorm/)
-+ **Terminal:** Tilix
-+ **Database Client:** [DataGrip](https://www.jetbrains.com/datagrip/) By JetBrains.
-+ **API Testing** is provided by [Insomnia](https://insomnia.rest/)
++ **Terminal:** Gnome-Terminal w/ Tmux
++ **Database Client:** [TablePlus](https://tableplus.com/).
++ **API Testing** is provided by [Postman](https://postman.com)
 + **Dev Environmet** are managed by [Docker](https://www.docker.com/) and [lazydocker](https://github.com/jesseduffield/lazydocker)
 + **GIT:** CLI driven :) + Sublime Merge *(I like how it shows you which command it will actually execute, that's the only reason i'm using it)*
 
 ### Terminal Essentials
-+ NeoVim. Really loving it. [Here you have number of reasons why you should use NeoVim instead of VIM](https://www.youtube.com/watch?v=LRQGAnPtNdM)
-+ [Bat](https://github.com/sharkdp/bat) (Better `cat`)
-+ I used to use `tmux`, but it turns out I don't really need it, but I'm occasionally using it.
+Just standard toolkit: `vim`, `cat`, `awk`, `grep`, `tmux`
 
 ### Other tools
-+ For music i'm using [Youtube Music](https://music.youtube.com)
-+ Email client is [MailSpring](https://getmailspring.com/)
-+ Browser of choice is [Firefox](https://www.firefox.com)
++ For music i'm using [Spotify](https://spotify.com)
++ Email client is [Geary](https://wiki.gnome.org/Apps/Geary)
++ Browsers [ "[Firefox](https://www.firefox.com)", "[Chrome](https://chrome.google.com)" ]
 + For communication i'm using [Discord](https://discordapp.com/) & [Slack](https://slack.com/)
 + For Staying Organized I'm using [Notion](https://notion.so)
 + For Office I used to use [Google Docs](docs.google.com), since it's free and awesome.
 + Markdown is done in [VSCode](https://code.visualstudio.com/), which i'm using as my secondary editor.
 
 And at the end, I'm keeping most of my files in [Google Drive](https://drive.google.com).
+
+## Installation
++ Install Plug (vim plugins system) => instructions [here](https://github.com/junegunn/vim-plug#vim)
++ Then open up vim and do `:PlugInstall` && restart vim
++ Copy & Paste the settings you want to use or symlink everything :) 
+
+## More useful stuff
+Since I liked the [Alfred](https://www.alfredapp.com/), and I couldn't find anything close to it, I did a little research. It seems like **POP!_OS** has this cool thing called **[POP!_OS SHELL](https://github.com/pop-os/shell)**. What it does is, that it will add tiling window manager into the gnome shell, and let u use their **Application Launcher**
+
+The Launcher itself can run/switch apps, but with a very clunky shortcut `Super+/`. *I HATE IT*. So I changed to shortcut to `Control+Space` 'cuse it's more convinient for me and forced pushed it to the maste :))) >>> [Here's the repo](https://github.com/TheMartes/shell)
+
+## Gnome Extensions
++ Alternate Tab
++ Bluetooth Quick Connect
++ Clipboard Indicator
++ Pop Shell (the modified version ;))
++ Refresh Wi-Fi Connections
++ Screenshot Tool
++ Vitals

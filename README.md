@@ -37,7 +37,7 @@ And at the end, I'm keeping most of my files in [Google Drive](https://drive.goo
 ## More useful stuff
 Since I liked the [Alfred](https://www.alfredapp.com/), and I couldn't find anything close to it, I did a little research. It seems like **POP!_OS** has this cool thing called **[POP!_OS SHELL](https://github.com/pop-os/shell)**. What it does is, that it will add tiling window manager into the gnome shell, and let u use their **Application Launcher**
 
-The Launcher itself can run/switch apps, but with a very clunky shortcut `Super+/`. *I HATE IT*. So I changed to shortcut to `Control+Space` 'cuse it's more convinient for me and forced pushed it to the maste :))) >>> [Here's the repo](https://github.com/TheMartes/shell)
+The Launcher itself can run/switch apps, but with a very clunky shortcut `Super+/`. *I HATE IT*. So I changed to shortcut to `Control+Space` 'cuse it's more convinient for me and forced pushed it to the master :))) >>> [Here's the repo](https://github.com/TheMartes/shell)
 
 ## Gnome Extensions
 + Alternate Tab

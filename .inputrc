@@ -1,3 +1,0 @@
-# Ignore Bash Completion Case
-$include /etc/inputrc
-set completion-ignore-case On

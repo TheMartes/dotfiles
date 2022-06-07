@@ -1,3 +1,7 @@
 [submodule "secrets"]
 	path = secrets
-	url = https://github.com/TheMartes/dotfiles-secrets
+    url = https://github.com/TheMartes/dotfiles-secrets
+
+[submodule "ssh"]
+	path = secrets/.ssh
+	url = https://github.com/TheMartes/ssh

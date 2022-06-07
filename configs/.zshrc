@@ -21,6 +21,8 @@ plugins=(git)
 
 source $ZSH/oh-my-zsh.sh
 
+STOW_FOLDERS="bin,configs,iterm,karabiner,nvim,secrets,workspacify"
+
 # Colorful LS
 unset LSCOLORS
 export CLICOLOR=1

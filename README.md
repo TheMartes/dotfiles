@@ -1,13 +1,15 @@
 <h1 align="center">~/.files</h1>
 
+<img src="https://i.imgur.com/ZZ8XpOU.png" align="center" />
+
 ***
 Just use it for whatever. Managed by Stow.
 ***
 
 # Tools I'm Using
 ### Development
-+ **Editor and IDE:** Neovim
-+ **Terminal:** iTerm2
++ **Editor and IDE:** [Neovim](https://neovim.io)
++ **Terminal:** [iTerm2](https://iterm2.com)
 + **Database Client:** [TablePlus](https://tableplus.com/).
 + **API Testing** is provided by [Insomnia](https://insomnia.rest/download)
 + **Dev Environmet** are managed by [Docker](https://www.docker.com/) and [lazydocker](https://github.com/jesseduffield/lazydocker)
@@ -19,8 +21,8 @@ Just standard toolkit: `neovim`, `cat`, `awk`, `ripgrep`
 ### Other tools
 + For music i'm using [Spotify](https://spotify.com)
 + Email client is [Spark](https://sparkmailapp.com)
-+ Browser: **Safari**
-+ Calendar: [Cron][https://cron.com]
++ Browser: [Safari](https://www.apple.com/safari/) *I mean I don't care as backend engineer what browser I'm using.*
++ Calendar: [Cron](https://cron.com)
 + For Staying Organized I'm using [Notion](https://notion.so)
 + For Office I used to use [Google Docs](docs.google.com), since it's free and awesome.
 + And I'm using [Alfred](https://www.alfredapp.com), cause spotlight sux

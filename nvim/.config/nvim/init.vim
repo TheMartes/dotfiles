@@ -16,7 +16,7 @@ set expandtab
 set scrolloff=10
 
 " Line numbers
-set number
+set relativenumber
 
 " No Wrapping
 set nowrap
@@ -31,7 +31,7 @@ set nois
 set updatetime=300
 
 " Sign columns
-set signcolumn=yes
+set signcolumn=no
 
 " Highlight all patterns
 set hlsearch
@@ -48,9 +48,7 @@ set autowrite
 call plug#begin()
 
 if has('nvim')
-  Plug 'Shougo/defx.nvim', { 'do': ':UpdateRemotePlugins' }
 else
-  Plug 'Shougo/defx.nvim'
   Plug 'roxma/nvim-yarp'
   Plug 'roxma/vim-hug-neovim-rpc'
 endif
@@ -106,40 +104,27 @@ Plug 'nvim-lua/plenary.nvim'
 Plug 'nvim-telescope/telescope.nvim'
 Plug 'nvim-telescope/telescope-fzy-native.nvim'
 Plug 'ThePrimeagen/harpoon'
+Plug 'folke/todo-comments.nvim'
+Plug 'm-demare/hlargs.nvim'
+Plug 'nvim-telescope/telescope-file-browser.nvim'
 
 " prettier
 Plug 'sbdchd/neoformat'
-
-" THE BEST THEME IN THE WORLD
-Plug 'Mofiqul/dracula.nvim'
 
 " Some other shit
 Plug 'jiangmiao/auto-pairs'
 Plug 'ryanoasis/vim-devicons'
 Plug 'L3MON4D3/LuaSnip'
-Plug 'luukvbaal/nnn.nvim'
-
-" Statusline
-Plug 'nvim-lualine/lualine.nvim'
-Plug 'SmiteshP/nvim-gps'
 
 call plug#end()
 
 " TreeSitter config
 lua require'nvim-treesitter.configs'.setup { highlight = { enable = true }, incremental_selection = { enable = true }, textobjects = { enable = true }}
 
-colorscheme dracula
-
 " Git Blame by line
 autocmd BufEnter * EnableBlameLine
 let g:blameLineUseVirtualText = 0
-
-" CTRL P Alternative
-nnoremap <C-p> :Telescope find_files<cr>
-" Search keyword in project
-nnoremap <leader>fg <cmd>Telescope live_grep<cr>
-" Search classes, objects, props in projet
-nnoremap <leader>fh <cmd>Telescope help_tags<cr>
+let g:blameLineVirtualTextFormat = '/* %s */'
 
 " Harpoon
 nnoremap <leader>hm <cmd>lua require("harpoon.mark").add_file()<cr>
@@ -147,19 +132,20 @@ nnoremap <leader>hl <cmd>lua require("harpoon.ui").toggle_quick_menu()<cr>
 
 lua require("martes")
 
+" CTRL P Alternative
+nnoremap <C-p> :Telescope find_files<cr>
+" TreeView Alternative
+nnoremap <leader>ff <cmd>Telescope file_browser<cr>
+" Search keyword in project
+nnoremap <leader>fg <cmd>Telescope live_grep<cr>
+" Search classes, objects, props in projet
+nnoremap <leader>fh <cmd>Telescope help_tags<cr>
+
 set encoding=UTF-8
 set guifont=MesloLGM_Nerd_Font:h14
 
 highlight Normal guibg=none
 highlight NonText guibg=none
-
-nnoremap <silent>sf :<C-u>Defx -listed -resume
-      \ -columns=indent:mark:icon:icons:filename:git:size
-      \ -buffer-name=tab`tabpagenr()`
-      \ `expand('%:p:h')` -search=`expand('%:p')`<CR>
-nnoremap <silent>fi :<C-u>Defx -new `expand('%:p:h')` -search=`expand('%:p')`<CR>
-
-nnoremap <C-t> :NnnPicker<CR>
 
 set completeopt=menu,menuone
 let g:completion_matching_strategy_list = ['exact', 'substring', 'fuzzy']

@@ -53,9 +53,6 @@ else
   Plug 'roxma/vim-hug-neovim-rpc'
 endif
 
-" IStealCodeALot
-Plug 'ambv/black'
-
 " LSP Completions
 Plug 'neovim/nvim-lspconfig'
 Plug 'hrsh7th/cmp-nvim-lsp'
@@ -77,12 +74,17 @@ Plug 'nvim-treesitter/playground'
 Plug 'mfussenegger/nvim-dap'
 Plug 'Pocco81/DAPInstall.nvim'
 Plug 'szw/vim-maximizer'
+Plug 'sebdah/vim-delve'
 
 " Pleb Snippets
 Plug 'rafamadriz/friendly-snippets'
 
+" Go
+Plug 'crispgm/nvim-go'
+Plug 'rcarriga/nvim-notify'
+
+" Garbage & Stuff
 Plug 'rust-lang/rust.vim'
-Plug 'darrikonn/vim-gofmt'
 Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-rhubarb'
 Plug 'junegunn/gv.vim'
@@ -140,6 +142,8 @@ nnoremap <leader>ff <cmd>Telescope file_browser<cr>
 nnoremap <leader>fg <cmd>Telescope live_grep<cr>
 " Search classes, objects, props in projet
 nnoremap <leader>fh <cmd>Telescope help_tags<cr>
+" Show opened editors
+nnoremap <leader>edt <cmd>Telescope buffers<cr>
 
 set encoding=UTF-8
 set guifont=MesloLGM_Nerd_Font:h14

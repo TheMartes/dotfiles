@@ -50,3 +50,8 @@ bindkey "^f" fzfCodeDirs
 
 source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 source /usr/local/share/zsh-autosuggestions/zsh-autosuggestions.zsh
+
+# pnpm
+export PNPM_HOME="/Users/martes/Library/pnpm"
+export PATH="$PNPM_HOME:$PATH"
+# pnpm end

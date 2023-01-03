@@ -71,3 +71,5 @@ export PATH="/usr/local/opt/go@1.18/bin:$PATH"
 # bun
 export BUN_INSTALL="$HOME/.bun"
 export PATH="$BUN_INSTALL/bin:$PATH"
+
+eval "$(starship init zsh)"

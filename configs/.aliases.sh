@@ -10,6 +10,7 @@ alias holy_trinity="git submodule update --init --force --recursive"
 alias hh="history | grep gds"
 alias vim="nvim $1"
 alias v="nvim $1"
+alias cat="bat "
 
 #Git
 alias gi="git init"
@@ -22,6 +23,6 @@ alias checkout="git checkout $1"
 alias branch="git branch $1"
 alias nah="git reset --hard;git clean -df;"
 
+# GCS Is my custom script to set proper git credentials based on workspace im in
 unset gcs
 alias gcs="bash $HOME/.git-credentials-setter.sh " # leave the space in the end, due to argument passing
-

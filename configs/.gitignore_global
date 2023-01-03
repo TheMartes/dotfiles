@@ -47,3 +47,5 @@ Thumbs.db
 node_modules
 www/build/webpack
 .gitignore.includes
+
+todo.md

@@ -23,6 +23,34 @@ return require('packer').startup(function(use)
 
   use ('nvim-treesitter/nvim-treesitter', {run = ':TSUpdate'})
   use { "catppuccin/nvim", as = "catppuccin" }
+  use ('crispgm/nvim-go')
+  use ('rcarriga/nvim-notify')
+  use ('nvim-lualine/lualine.nvim')
+  use ('nvim-tree/nvim-web-devicons')
+
+  use {
+      'lewis6991/gitsigns.nvim',
+      config = function()
+          require('gitsigns').setup {
+              signs = {
+                  add          = { text = '│' },
+                  change       = { text = '│' },
+                  delete       = { text = '_' },
+                  topdelete    = { text = '‾' },
+                  changedelete = { text = '~' },
+                  untracked    = { text = '┆' },
+              },
+              current_line_blame = true,
+              current_line_blame_opts = {
+                  virt_text = true,
+                  virt_text_pos = 'right_align', -- 'eol' | 'overlay' | 'right_align'
+                  delay = 10,
+                  ignore_whitespace = false,
+              },
+          }
+      end
+  }
+  use 'm4xshen/autoclose.nvim'
 
   use ('mbbill/undotree')
   use ('tpope/vim-fugitive')

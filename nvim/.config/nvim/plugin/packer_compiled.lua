@@ -114,13 +114,23 @@ _G.packer_plugins = {
     path = "/Users/martes/.local/share/nvim/site/pack/packer/start/cmp_luasnip",
     url = "https://github.com/saadparwaiz1/cmp_luasnip"
   },
+  ["diagnosticls-configs-nvim"] = {
+    loaded = true,
+    path = "/Users/martes/.local/share/nvim/site/pack/packer/start/diagnosticls-configs-nvim",
+    url = "https://github.com/creativenull/diagnosticls-configs-nvim"
+  },
+  ["editorconfig.nvim"] = {
+    loaded = true,
+    path = "/Users/martes/.local/share/nvim/site/pack/packer/start/editorconfig.nvim",
+    url = "https://github.com/gpanders/editorconfig.nvim"
+  },
   ["friendly-snippets"] = {
     loaded = true,
     path = "/Users/martes/.local/share/nvim/site/pack/packer/start/friendly-snippets",
     url = "https://github.com/rafamadriz/friendly-snippets"
   },
   ["gitsigns.nvim"] = {
-    config = { "\27LJ\2\n�\2\0\0\5\0\20\0\0236\0\0\0'\2\1\0B\0\2\0029\0\2\0005\2\16\0005\3\4\0005\4\3\0=\4\5\0035\4\6\0=\4\a\0035\4\b\0=\4\t\0035\4\n\0=\4\v\0035\4\f\0=\4\r\0035\4\14\0=\4\15\3=\3\17\0025\3\18\0=\3\19\2B\0\2\1K\0\1\0\28current_line_blame_opts\1\0\4\14virt_text\2\ndelay\3\n\22ignore_whitespace\1\18virt_text_pos\16right_align\nsigns\1\0\1\23current_line_blame\2\14untracked\1\0\1\ttext\b┆\17changedelete\1\0\1\ttext\6~\14topdelete\1\0\1\ttext\b‾\vdelete\1\0\1\ttext\6_\vchange\1\0\1\ttext\b│\badd\1\0\0\1\0\1\ttext\b│\nsetup\rgitsigns\frequire\0" },
+    config = { "\27LJ\2\n�\2\0\0\5\0\20\0\0236\0\0\0'\2\1\0B\0\2\0029\0\2\0005\2\16\0005\3\4\0005\4\3\0=\4\5\0035\4\6\0=\4\a\0035\4\b\0=\4\t\0035\4\n\0=\4\v\0035\4\f\0=\4\r\0035\4\14\0=\4\15\3=\3\17\0025\3\18\0=\3\19\2B\0\2\1K\0\1\0\28current_line_blame_opts\1\0\4\22ignore_whitespace\1\18virt_text_pos\16right_align\14virt_text\2\ndelay\3\n\nsigns\1\0\1\23current_line_blame\2\14untracked\1\0\1\ttext\b┆\17changedelete\1\0\1\ttext\6~\14topdelete\1\0\1\ttext\b‾\vdelete\1\0\1\ttext\6_\vchange\1\0\1\ttext\b│\badd\1\0\0\1\0\1\ttext\b│\nsetup\rgitsigns\frequire\0" },
     loaded = true,
     path = "/Users/martes/.local/share/nvim/site/pack/packer/start/gitsigns.nvim",
     url = "https://github.com/lewis6991/gitsigns.nvim"
@@ -129,6 +139,12 @@ _G.packer_plugins = {
     loaded = true,
     path = "/Users/martes/.local/share/nvim/site/pack/packer/start/lsp-zero.nvim",
     url = "https://github.com/VonHeikemen/lsp-zero.nvim"
+  },
+  ["lspsaga.nvim"] = {
+    config = { "\27LJ\2\nQ\0\0\3\0\4\0\a6\0\0\0'\2\1\0B\0\2\0029\0\2\0005\2\3\0B\0\2\1K\0\1\0\1\0\1\17border_style\frounded\nsetup\flspsaga\frequire\0" },
+    loaded = true,
+    path = "/Users/martes/.local/share/nvim/site/pack/packer/start/lspsaga.nvim",
+    url = "https://github.com/glepnir/lspsaga.nvim"
   },
   ["lualine.nvim"] = {
     loaded = true,
@@ -209,9 +225,13 @@ _G.packer_plugins = {
 }
 
 time([[Defining packer_plugins]], false)
+-- Config for: lspsaga.nvim
+time([[Config for lspsaga.nvim]], true)
+try_loadstring("\27LJ\2\nQ\0\0\3\0\4\0\a6\0\0\0'\2\1\0B\0\2\0029\0\2\0005\2\3\0B\0\2\1K\0\1\0\1\0\1\17border_style\frounded\nsetup\flspsaga\frequire\0", "config", "lspsaga.nvim")
+time([[Config for lspsaga.nvim]], false)
 -- Config for: gitsigns.nvim
 time([[Config for gitsigns.nvim]], true)
-try_loadstring("\27LJ\2\n�\2\0\0\5\0\20\0\0236\0\0\0'\2\1\0B\0\2\0029\0\2\0005\2\16\0005\3\4\0005\4\3\0=\4\5\0035\4\6\0=\4\a\0035\4\b\0=\4\t\0035\4\n\0=\4\v\0035\4\f\0=\4\r\0035\4\14\0=\4\15\3=\3\17\0025\3\18\0=\3\19\2B\0\2\1K\0\1\0\28current_line_blame_opts\1\0\4\14virt_text\2\ndelay\3\n\22ignore_whitespace\1\18virt_text_pos\16right_align\nsigns\1\0\1\23current_line_blame\2\14untracked\1\0\1\ttext\b┆\17changedelete\1\0\1\ttext\6~\14topdelete\1\0\1\ttext\b‾\vdelete\1\0\1\ttext\6_\vchange\1\0\1\ttext\b│\badd\1\0\0\1\0\1\ttext\b│\nsetup\rgitsigns\frequire\0", "config", "gitsigns.nvim")
+try_loadstring("\27LJ\2\n�\2\0\0\5\0\20\0\0236\0\0\0'\2\1\0B\0\2\0029\0\2\0005\2\16\0005\3\4\0005\4\3\0=\4\5\0035\4\6\0=\4\a\0035\4\b\0=\4\t\0035\4\n\0=\4\v\0035\4\f\0=\4\r\0035\4\14\0=\4\15\3=\3\17\0025\3\18\0=\3\19\2B\0\2\1K\0\1\0\28current_line_blame_opts\1\0\4\22ignore_whitespace\1\18virt_text_pos\16right_align\14virt_text\2\ndelay\3\n\nsigns\1\0\1\23current_line_blame\2\14untracked\1\0\1\ttext\b┆\17changedelete\1\0\1\ttext\6~\14topdelete\1\0\1\ttext\b‾\vdelete\1\0\1\ttext\6_\vchange\1\0\1\ttext\b│\badd\1\0\0\1\0\1\ttext\b│\nsetup\rgitsigns\frequire\0", "config", "gitsigns.nvim")
 time([[Config for gitsigns.nvim]], false)
 -- Config for: rose-pine
 time([[Config for rose-pine]], true)

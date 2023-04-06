@@ -3,8 +3,10 @@ local diagnosticls = require("diagnosticls-configs")
 local lspconfig = require("lspconfig")
 lsp.preset('recommended')
 
+vim.cmd("doautocmd BufNewFile,BufRead *.php setfiletype php")
+
 -- Fix Undefined global 'vim'
-lsp.configure('sumneko_lua', {
+lsp.configure('lua_ls', {
     settings = {
         Lua = {
             diagnostics = {
@@ -48,6 +50,28 @@ capabilities.textDocument.completion.completionItem.resolveSupport = {
 	},
 }
 
+lspconfig.intelephense.setup({
+    settings = {
+        intelephense = {
+            environment = {
+                includePaths = { "**/vendor/**" }
+            },
+            files = {
+                exclude = {
+                      "**/.git/**",
+                      "**/.svn/**",
+                      "**/.hg/**",
+                      "**/CVS/**",
+                      "**/.DS_Store/**",
+                      "**/node_modules/**",
+                      "**/bower_components/**",
+                      "**/vendor/**/{Test,test,Tests,tests}/**/*Test.php"
+                }
+            }
+        }
+    }
+})
+
 local default_config = {
 	on_attach = on_attach,
 	capabilities = capabilities,
@@ -60,7 +84,7 @@ lsp.ensure_installed({
     'bashls',
     'html',
 	'eslint',
-	'sumneko_lua',
+	'lua_ls',
 	'gopls',
 	'intelephense',
     'yamlls',
@@ -76,7 +100,7 @@ lspconfig.html.setup(default_config)
 lspconfig.jsonls.setup(default_config)
 lspconfig.yamlls.setup(default_config)
 lspconfig.gopls.setup(default_config)
-lspconfig.sumneko_lua.setup(default_config)
+lspconfig.lua_ls.setup(default_config)
 
 -- Typescript/JavaScript
 local function organize_imports()
@@ -104,7 +128,7 @@ local lua_rtp = vim.split(package.path, ";")
 table.insert(lua_rtp, "lua/?.lua")
 table.insert(lua_rtp, "lua/?/init.lua")
 
-lspconfig.sumneko_lua.setup(vim.tbl_extend("force", default_config, {
+lspconfig.lua_ls.setup(vim.tbl_extend("force", default_config, {
 	settings = {
 		Lua = {
 			runtime = {

@@ -25,3 +25,9 @@ vim.opt.isfname:append("@-@")
 
 vim.opt.updatetime = 50
 
+-- Fix indentation for php files
+vim.api.nvim_create_autocmd({"BufWinEnter"}, {
+  pattern = "*.php",
+  command = "set syn=php",
+})
+

@@ -8,13 +8,6 @@ return require('packer').startup(function(use)
   use 'wbthomason/packer.nvim'
 
   -- Themes & Appearance
-  use({
-	  'rose-pine/neovim',
-	  as = 'rose-pine',
-	  config = function()
-		  vim.cmd('colorscheme rose-pine')
-	  end
-  })
   use { "catppuccin/nvim", as = "catppuccin" }
   use ('nvim-lualine/lualine.nvim')
   use ('nvim-tree/nvim-web-devicons')
@@ -22,14 +15,17 @@ return require('packer').startup(function(use)
       "glepnir/lspsaga.nvim",
       branch = "main",
       config = function()
-          require('lspsaga').setup({ border_style = "rounded" })
+          require('lspsaga').setup({
+              border_style = "rounded",
+          })
       end,
   })
 
-
   -- LSP
   use ('nvim-treesitter/nvim-treesitter', {run = ':TSUpdate'})
-  use ('rcarriga/nvim-notify')
+  use ('fpob/nette.vim')
+
+  use ('rcarriga/nvim-notify') -- for gopls notify on autoformat
   use {
 	  'VonHeikemen/lsp-zero.nvim',
 	  requires = {
@@ -51,6 +47,12 @@ return require('packer').startup(function(use)
 		  {'rafamadriz/friendly-snippets'},
 	  }
     }
+    use({
+        'phpactor/phpactor',
+        branch = 'master',
+        ft = 'php',
+        run = 'composer install --no-dev -o',
+    })
 
   -- Language Specific
   use ('crispgm/nvim-go')
@@ -72,8 +74,8 @@ return require('packer').startup(function(use)
               current_line_blame = true,
               current_line_blame_opts = {
                   virt_text = true,
-                  virt_text_pos = 'right_align', -- 'eol' | 'overlay' | 'right_align'
-                  delay = 10,
+                  virt_text_pos = 'eol', -- 'eol' | 'overlay' | 'right_align'
+                  delay = 1,
                   ignore_whitespace = false,
               },
           }

@@ -28,6 +28,8 @@ export PNPM_HOME="/Users/martes/Library/pnpm"
 export PATH="$PNPM_HOME:$PATH"
 # pnpm end
 
+eval "$(fnm env --use-on-cd)"
+
 # Plugins
 plugins=(git)
 
@@ -65,5 +67,3 @@ source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
 # bun completions
 [ -s "/Users/martes/.bun/_bun" ] && source "/Users/martes/.bun/_bun"
-
-eval "$(starship init zsh)"

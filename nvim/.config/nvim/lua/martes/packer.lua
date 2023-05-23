@@ -24,6 +24,7 @@ return require('packer').startup(function(use)
   -- LSP
   use ('nvim-treesitter/nvim-treesitter', {run = ':TSUpdate'})
   use ('fpob/nette.vim')
+  use ('leafOfTree/vim-vue-plugin')
 
   use ('rcarriga/nvim-notify') -- for gopls notify on autoformat
   use {
@@ -93,6 +94,7 @@ return require('packer').startup(function(use)
   use 'm4xshen/autoclose.nvim'
   use ('mbbill/undotree')
   use ('tpope/vim-fugitive')
+  use ('tpope/vim-commentary')
   use {
 	  'nvim-telescope/telescope.nvim', tag = '0.1.0',
 	  -- or                            , branch = '0.1.x',

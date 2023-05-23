@@ -22,6 +22,7 @@ alias pull="git pull"
 alias checkout="git checkout $1"
 alias branch="git branch $1"
 alias nah="git reset --hard;git clean -df;"
+alias wip="git add . && git commit -m 'wip'"
 
 # GCS Is my custom script to set proper git credentials based on workspace im in
 unset gcs

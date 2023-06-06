@@ -1,15 +1,34 @@
 <h1 align="center">~/.files</h1>
 
-<img src="https://i.imgur.com/9UtzcU2.png" align="center" />
+<img src="https://i.imgur.com/omE27L9.png" align="center" />
 
 ***
-Just use it for whatever. Managed by Stow.
+<span align="center">Just use it for whatever. Managed by Stow.</span>
 ***
+
+## Dependencies
+- Stow > 2.3.0
+- git
+- zsh
+- oh-my-zsh
+
+## Before you install
+Make sure you have oh-my-zsh installed and running as this script heavily depends on oh-my-zsh framework and `.zshrc` needs to be present in home folder. During the setup process `.zshrc` will be renamed to `.zshrc.old` which will serve as backup in case something goes horibly wrong.  
 
 ## Installation
 + Clone Repo
-+ Instal Starship >> `curl -sS https://starship.rs/install.sh | sh`
-+ Add eval at the end of `.zshrc` >> `eval "$(starship init zsh)"`
-+ Make sure `stow` is installed, and then run `./setup` (make sure u will update STOW_DIRECTORIES in ./setup and .zshrc)
-+ Install neovim (for macOS & Hombrew `brew install neovim`)
-+ Open it up and go to Command Mode and run `PackerSync`
++ Make sure all the dependencies are installed
++ Run `./setup`
++ Install NeoVim
++ Install Packer -> [learn how here](https://github.com/wbthomason/packer.nvim#quickstart)
++ Open NeoVim and run `:PackerSync` (You might need to scroll through a bunch of errors since the pckgs are not yet installed)
+
+## Handcrafted tools
+### TM - Tmux Sessionizer
+Tmux Sessionizer could be found in `bin/bin/tm`, upon running the script it will show you options to either create new tmux sessions or open existing. You can name them however you want and they do persist through PC restarts. `tm` is there just to simplify work with tmux as command to hook up existing sessions and get their names could be quite exhausting if you're doing it every couple of hours
+
+### Pogmit - Git Commit Generator
+`pogmit` simplifies process of creating conventional commits. In our work we have to include issue number in the commit and also scope, type + message, it's a lot of typing and copy pasting, so this is there just to make it more quicker
+
+## License
+None LMAO

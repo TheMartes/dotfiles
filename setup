@@ -1,4 +1,8 @@
 #!/usr/bin/env zsh
+
+# Backup old .zshrc
+mv $HOME/.zshrc $HOME/.zshrc.old
+
 if [[ -z $STOW_FOLDERS ]]; then
     STOW_FOLDERS="bin,configs,iterm,karabiner,nvim,secrets,workspacify"
 fi

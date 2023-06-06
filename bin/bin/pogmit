@@ -1,0 +1,18 @@
+#!/bin/bash
+
+# Prompt the user for type and message
+read -p "Enter the type: " type
+read -p "Enter the message: " message
+read -p "Enter the scope: " scope
+
+# Get the current git branch
+branch=$(git rev-parse --abbrev-ref HEAD)
+
+# Extract the issue number and scope from the branch name
+issue_number=$(echo "$branch" | awk -F '/' '{print $1}')
+
+# Generate the commit message
+commit_message="$type($scope): $message [$issue_number]"
+
+# Run the git commit command
+git commit -m "$commit_message"

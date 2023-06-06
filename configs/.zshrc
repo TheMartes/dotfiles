@@ -1,19 +1,19 @@
 # Path
-export ZSH="/Users/martes/.oh-my-zsh"
-export PATH="/Users/martes/bin:$PATH"
+export ZSH="$HOME/.oh-my-zsh"
+export PATH="$HOME/bin:$PATH"
 export PATH="/usr/local/opt/coreutils/libexec/gnubin:$PATH"
 export PATH="/usr/local/opt/coreutils/libexec/gnubin:$PATH"
 export PATH="/usr/local/opt/make/libexec/gnubin:$PATH"
-export PATH="/Users/martes/.rover/bin:$PATH"
+export PATH="$HOME/.rover/bin:$PATH"
 export PATH="/usr/local/opt/go/bin:$PATH"
 export PATH="$HOME/.composer/vendor/bin:$PATH"
 export GOPATH=$HOME/go
-export GOROOT=/usr/local/opt/go/libexec
 export PATH=$PATH:$GOROOT/bin:$GOPATH/bin
 export PATH=$PATH:$PATH:$(go env GOPATH)/bin
 export TMUX_TMPDIR=~/.tmux/tmp
 export GO111MODULE=on
 export HOMEBREW_NO_AUTO_UPDATE=1
+export PATH="${KREW_ROOT:-$HOME/.krew}/bin:$PATH"
 
 # bun
 export BUN_INSTALL="$HOME/.bun"
@@ -28,7 +28,6 @@ export PNPM_HOME="/Users/martes/Library/pnpm"
 export PATH="$PNPM_HOME:$PATH"
 # pnpm end
 
-eval "$(fnm env --use-on-cd)"
 
 # Plugins
 plugins=(git)
@@ -45,7 +44,6 @@ export LSCOLORS=ExGxBxDxCxEgEdxbxgxcxd
 
 # Aliases
 source $HOME/.aliases.sh
-alias ls="gls --color=always"
 
 export FZF_DEFAULT_OPTS=" \
 --color=bg+:#313244,bg:#1e1e2e,spinner:#f5e0dc,hl:#f38ba8 \
@@ -63,7 +61,13 @@ fzfCodeDirs() {
 zle -N fzfCodeDirs
 bindkey "^f" fzfCodeDirs
 
-source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
-
 # bun completions
 [ -s "/Users/martes/.bun/_bun" ] && source "/Users/martes/.bun/_bun"
+
+# fnm
+export PATH="/home/martes/.local/share/fnm:$PATH"
+eval "$(fnm env --use-on-cd)"
+
+# gnupg fix arch linux
+GPG_TTY=$(tty)
+export GPG_TTY

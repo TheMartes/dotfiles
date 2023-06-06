@@ -1,9 +1,18 @@
 #!/bin/bash
 
-# Prompt the user for type and message
+valid_types=("fix" "feat" "chore" "ci" "docs" "style" "refactor" "perf" "test")
+echo "Types:${valid_types[@]}" | sed 's/ /, /g'
 read -p "Enter the type: " type
-read -p "Enter the message: " message
+
+
+# Validate before continue
+if [[ ! " ${valid_types[@]} " =~ " ${type} " ]]; then
+  echo "Invalid type. Please choose one of the following: ${valid_types[@]}"
+  exit 1
+fi
+
 read -p "Enter the scope: " scope
+read -p "Enter the message: " message
 
 # Get the current git branch
 branch=$(git rev-parse --abbrev-ref HEAD)

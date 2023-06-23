@@ -20,8 +20,7 @@ export BUN_INSTALL="$HOME/.bun"
 export PATH="$BUN_INSTALL/bin:$PATH"
 
 # Theme
-# ZSH_THEME="lambda"
-# export BAT_THEME="Catppuccin-mocha"
+export BAT_THEME="Catppuccin-mocha"
 
 # pnpm
 export PNPM_HOME="/Users/martes/Library/pnpm"

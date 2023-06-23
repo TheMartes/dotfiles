@@ -20,8 +20,8 @@ export BUN_INSTALL="$HOME/.bun"
 export PATH="$BUN_INSTALL/bin:$PATH"
 
 # Theme
-ZSH_THEME="robbyrussell"
-export BAT_THEME="Catppuccin-mocha"
+# ZSH_THEME="lambda"
+# export BAT_THEME="Catppuccin-mocha"
 
 # pnpm
 export PNPM_HOME="/Users/martes/Library/pnpm"
@@ -64,6 +64,7 @@ zle -N fzfCodeDirs
 bindkey "^f" fzfCodeDirs
 
 source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+source $HOME/.prompt.sh
 
 # bun completions
 [ -s "/Users/martes/.bun/_bun" ] && source "/Users/martes/.bun/_bun"

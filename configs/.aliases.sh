@@ -9,7 +9,7 @@ alias weather='curl -4 http://wttr.in/Trnava'
 alias holy_trinity="git submodule update --init --force --recursive"
 alias hh="history | grep gds"
 alias vim="nvim $1"
-alias v="nvim $1"
+alias v="/usr/bin/vim $1"
 alias cat="bat "
 
 #Git

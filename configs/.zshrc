@@ -1,10 +1,10 @@
 # Path
-export ZSH="/Users/martes/.oh-my-zsh"
-export PATH="/Users/martes/bin:$PATH"
+export ZSH="$HOME/.oh-my-zsh"
+export PATH="$HOME/bin:$PATH"
 export PATH="/usr/local/opt/coreutils/libexec/gnubin:$PATH"
 export PATH="/usr/local/opt/coreutils/libexec/gnubin:$PATH"
 export PATH="/usr/local/opt/make/libexec/gnubin:$PATH"
-export PATH="/Users/martes/.rover/bin:$PATH"
+export PATH="$HOME/.rover/bin:$PATH"
 export PATH="/usr/local/opt/go/bin:$PATH"
 export PATH="$HOME/.composer/vendor/bin:$PATH"
 export GOPATH=$HOME/go

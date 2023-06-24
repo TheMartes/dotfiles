@@ -46,7 +46,14 @@ if [[ "$answer" == "yes" ]]; then
   echo
     
   unzip willy_wonka.zip -P $passphrase
+
+  mv willy_wonka/ssh willy_wonka/.ssh
+  mv willy_wonka/.ssh $HOME
+  gpg --import willy_wonka/chocolate.gpg
+  rm -rf willy_wonka
   
 else
   echo "Okay, maybe next time. Have a sweet day!"
 fi
+
+printf "Done ✨ \n"

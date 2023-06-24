@@ -1,6 +1,9 @@
 #!/usr/bin/env zsh
 # I am using zsh instead of bash.  I was having some troubles using bash with
 # arrays.  Didn't want to investigate, so I just did zsh
+
+printf "🗃️ Symlinking dotfiles... "
+
 pushd $DOTFILES
 for folder in $(echo $STOW_FOLDERS | sed "s/,/ /g")
 do
@@ -8,3 +11,42 @@ do
     stow $folder
 done
 popd
+
+printf "Done ✨ \n"
+printf "🍺 Installing homebrew... "
+
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+printf "Done ✨ \n"
+printf "🍻 Installing brew packages... "
+
+brew bundle install
+printf "Done ✨ \n"
+printf "🥥 Installing Oh My Zsh... "
+
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+printf "Done ✨ \n"
+
+printf "🌶️ Sourcing .zshrc"
+source $HOME/.zshrc
+printf "Done ✨ \n"
+
+read -p "🍫 Would you like to visit the chocolate factory now? (yes/no): " answer
+answer=${answer,,}
+
+if [[ "$answer" == "yes" ]]; then
+  echo "Great! Let's proceed to the next step."
+  
+  # ANSIBLE
+  print "Please enter the secret formula: "
+  ansible-vault decrypt willy_wonka.zip
+  echo
+
+  # ZIP
+  read -s -p "Now please enter the secret passphrase to Candyland: " passphrase
+  echo
+    
+  unzip willy_wonka.zip -P $passphrase
+  
+else
+  echo "Okay, maybe next time. Have a sweet day!"
+fi

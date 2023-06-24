@@ -1,10 +1,17 @@
 #!/usr/bin/env zsh
+
+printf "💻 Preparing environemnt... "
+
 if [[ -z $STOW_FOLDERS ]]; then
-    STOW_FOLDERS="bin,configs,iterm,nvim"
+    current_directory=$(pwd)
+    STOW_FOLDERS=$(find "$current_directory" -mindepth 1 -maxdepth 1 -type d ! -name ".git" -exec basename {} \; | awk 'NR>1 {print ","} {print}' | tr -d '\n')
 fi
 
 if [[ -z $DOTFILES ]]; then
     DOTFILES=$HOME/.dotfiles
 fi
+
+printf "Done ✨ \n"
+printf "👾 Initiating install process"
 
 STOW_FOLDERS=$STOW_FOLDERS DOTFILES=$DOTFILES $DOTFILES/install

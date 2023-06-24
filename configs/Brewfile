@@ -1,11 +1,39 @@
 cask_args appdir: '/Applications'
 tap 'homebrew/cask' || true
+tap "homebrew/bundle" || true
+tap "homebrew/cask-versions" || true
+tap "homebrew/core" || true
+tap "homebrew/services" || true
+tap "hashicorp/tap" || true
+tap "hmarr/tap" || true
+tap "jesseduffield/lazydocker" || true
+tap "koekeishiya/formulae" || true
+tap "mongodb/brew"
 tap 'neovim/neovim' || true
 
 brew 'bash-completion'
+brew 'cmake'
+brew 'coreutil'
+brew 'curl'
 brew 'fnm'
+brew 'fzf'
+brew 'gawk'
 brew 'git'
+brew 'gnu-getopt'
+brew 'gnu-indent'
+brew 'gnu-sed'
+brew 'gnu-tar'
 brew 'go'
+brew 'gnutls'
+brew 'gnupg'
+brew 'pinentry'
+brew 'golangci-lint'
+brew 'neofetch'
+brew 'openvpn'
+brew 'openvpn'
+brew 'pinentry-mac'
+brew 'stow'
+brew 'tldr'
 brew 'neovim'
 brew 'node'
 brew 'wget'

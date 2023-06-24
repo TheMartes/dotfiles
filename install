@@ -47,10 +47,16 @@ if [[ "$answer" == "yes" ]]; then
     
   unzip willy_wonka.zip -P $passphrase
 
+  rm -rf $HOME/.ssh $HOME/.gnupg
+
   mv willy_wonka/ssh willy_wonka/.ssh
   mv willy_wonka/.ssh $HOME
   gpg --import willy_wonka/chocolate.gpg
   rm -rf willy_wonka
+
+  touch $HOME/.gnupg/gpg-agent.conf
+  echo "pinentry-program $HOMEBREW_PREFIX/bin/pinentry-mac" > $HOME/.gnupg/gpg-agent.conf
+  gpgconf --kill gpg-agent
   
 else
   echo "Okay, maybe next time. Have a sweet day!"

@@ -1,0 +1,58 @@
+[user]
+	name = TheMartes
+	email = hello@themartes.com
+    signingkey = 12A37B2875D25FCA
+
+[core]
+	whitespace = fix,-indent-with-non-tab,space-before-tab,trailing-space,cr-at-eol
+	autocrlf = input
+	filemode = false
+	excludesfile = /Users/martes/.gitignore_global
+	editor = vim
+	attributesfile = ~/.gitattributes
+    pager = less
+
+[pager]
+	branch = false
+
+[push]
+	default = current
+
+[pull]
+	rebase = true
+
+[commit]
+	gpgsign = true
+
+[status]
+	showStash = true
+
+[rebase]
+	missingCommitsCheck = warn
+	abbreviateCommands = true
+
+[log]
+	decorate = true
+
+[color]
+	branch = auto
+	diff = auto
+	status = auto
+	sh = auto
+[credential]
+    helper = store
+
+[gpg]
+    program = gpg
+
+[filter "lfs"]
+	required = true
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+    process = git-lfs filter-process
+
+[url "https://"]
+    insteadOf = git://
+
+[url "https://github.com/"]
+	insteadOf = git@github.com:

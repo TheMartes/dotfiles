@@ -1,0 +1,9 @@
+font-family = "Menlo"
+font-size = 14
+window-padding-x = 14
+window-padding-y = 14
+link-url = true
+font-thicken = true
+cursor-style = block
+shell-integration-features = no-cursor
+theme = iTerm2 Smoooooth

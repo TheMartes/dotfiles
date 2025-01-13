@@ -1,3 +1,5 @@
+# Add deno completions to search path
+if [[ ":$FPATH:" != *":/Users/martes/.zsh/completions:"* ]]; then export FPATH="/Users/martes/.zsh/completions:$FPATH"; fi
 # Path
 export ZSH="$HOME/.oh-my-zsh"
 export PATH="$HOME/bin:$PATH"
@@ -14,6 +16,9 @@ export TMUX_TMPDIR=~/.tmux/tmp
 export GO111MODULE=on
 export HOMEBREW_NO_AUTO_UPDATE=1
 export PATH="${KREW_ROOT:-$HOME/.krew}/bin:$PATH"
+export PATH=/opt/homebrew/opt/llvm/bin:$PATH
+
+alias make='gmake'
 
 # bun
 export BUN_INSTALL="$HOME/.bun"
@@ -25,7 +30,10 @@ export BAT_THEME="Catppuccin-mocha"
 
 # pnpm
 export PNPM_HOME="/Users/martes/Library/pnpm"
-export PATH="$PNPM_HOME:$PATH"
+case ":$PATH:" in
+  *":$PNPM_HOME:"*) ;;
+  *) export PATH="$PNPM_HOME:$PATH" ;;
+esac
 # pnpm end
 
 
@@ -71,3 +79,15 @@ eval "$(fnm env --use-on-cd)"
 # gnupg fix arch linux
 GPG_TTY=$(tty)
 export GPG_TTY
+
+[[ "$TERM_PROGRAM" == "CodeEditApp_Terminal" ]] && . "/Applications/CodeEdit.app/Contents/Resources/codeedit_shell_integration.zsh"
+
+# The next line updates PATH for the Google Cloud SDK.
+if [ -f '/Users/martes/google-cloud-sdk/path.zsh.inc' ]; then . '/Users/martes/google-cloud-sdk/path.zsh.inc'; fi
+
+# The next line enables shell command completion for gcloud.
+if [ -f '/Users/martes/google-cloud-sdk/completion.zsh.inc' ]; then . '/Users/martes/google-cloud-sdk/completion.zsh.inc'; fi
+. "/Users/martes/.deno/env"
+# Initialize zsh completions (added by deno install script)
+autoload -Uz compinit
+compinit

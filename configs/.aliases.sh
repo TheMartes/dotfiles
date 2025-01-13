@@ -1,6 +1,7 @@
 #System
 alias c="clear"
 alias g="git "
+alias k=kubectl
 alias l="ls -oh"
 alias la="ls -oAh"
 alias tmux_reload="tmux source-file ~/.tmux.conf"

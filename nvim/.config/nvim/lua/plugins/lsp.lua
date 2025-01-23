@@ -29,6 +29,9 @@ return {
             lspconfig.tailwindcss.setup({
                 capabilities = capabilities,
             })
+            lspconfig.gopls.setup({
+                capabilities = capabilities,
+            })
 
             -- Keymaps
             vim.keymap.set('n', 'K', vim.lsp.buf.hover, {})

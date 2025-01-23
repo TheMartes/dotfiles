@@ -1,6 +1,4 @@
-<h1 align="center">~/.files</h1>
-
-<img src="https://i.imgur.com/omE27L9.png" align="center" />
+<h1 align="center">~/.dotfiles</h1>
 
 ***
 <span align="center">Just use it for whatever. Managed by Stow.</span>
@@ -29,6 +27,13 @@ Tmux Sessionizer could be found in `bin/bin/tm`, upon running the script it will
 
 ### Pogmit - Git Commit Generator
 `pogmit` simplifies process of creating conventional commits. In our work we have to include issue number in the commit and also scope, type + message, it's a lot of typing and copy pasting, so this is there just to make it more quicker
+
+
+### Uses
+- [Neovim](https://neovim.io/)
+- [Ghostty](https://ghostty.org/)
+- [TablePlus](https://tableplus.com/)
+- [Bear](https://bear.app/)
 
 ## License
 None LMAO

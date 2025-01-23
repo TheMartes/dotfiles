@@ -22,21 +22,12 @@ return {
 
             lspconfig.astro.setup({
                 capabilities = capabilities,
-                on_attach = function(client, bufnr)
-                    require('lsp.handlers').setup(client, bufnr)
-                end,
             })
             lspconfig.intelephense.setup({
                 capabilities = capabilities,
-                on_attach = function(client, bufnr)
-                    require('lsp.handlers').setup(client, bufnr)
-                end,
             })
             lspconfig.tailwindcss.setup({
                 capabilities = capabilities,
-                on_attach = function(client, bufnr)
-                    require('lsp.handlers').setup(client, bufnr)
-                end,
             })
 
             -- Keymaps

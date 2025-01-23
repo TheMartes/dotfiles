@@ -24,3 +24,5 @@ alias wip="git add . && git commit -m 'wip'"
 # GCS Is my custom script to set proper git credentials based on workspace im in
 unset gcs
 alias gcs="bash $HOME/.git-credentials-setter.sh " # leave the space in the end, due to argument passing
+
+alias vim="nvim "

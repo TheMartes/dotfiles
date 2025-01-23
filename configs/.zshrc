@@ -17,6 +17,7 @@ export GO111MODULE=on
 export HOMEBREW_NO_AUTO_UPDATE=1
 export PATH="${KREW_ROOT:-$HOME/.krew}/bin:$PATH"
 export PATH=/opt/homebrew/opt/llvm/bin:$PATH
+export PATH="/Applications/Sublime Text.app/Contents/SharedSupport/bin:$PATH"
 
 alias make='gmake'
 
@@ -70,10 +71,10 @@ zle -N fzfCodeDirs
 bindkey "^f" fzfCodeDirs
 
 # bun completions
-[ -s "/Users/martes/.bun/_bun" ] && source "/Users/martes/.bun/_bun"
+[ -s "$HOME/.bun/_bun" ] && source "$HOME/.bun/_bun"
 
 # fnm
-export PATH="/home/martes/.local/share/fnm:$PATH"
+export PATH="$HOME/.local/share/fnm:$PATH"
 eval "$(fnm env --use-on-cd)"
 
 # gnupg fix arch linux
@@ -86,8 +87,16 @@ export GPG_TTY
 if [ -f '/Users/martes/google-cloud-sdk/path.zsh.inc' ]; then . '/Users/martes/google-cloud-sdk/path.zsh.inc'; fi
 
 # The next line enables shell command completion for gcloud.
-if [ -f '/Users/martes/google-cloud-sdk/completion.zsh.inc' ]; then . '/Users/martes/google-cloud-sdk/completion.zsh.inc'; fi
+if [ -f '$HOME/google-cloud-sdk/completion.zsh.inc' ]; then . '$HOME/google-cloud-sdk/completion.zsh.inc'; fi
 . "/Users/martes/.deno/env"
 # Initialize zsh completions (added by deno install script)
 autoload -Uz compinit
 compinit
+
+
+# Herd injected PHP 8.4 configuration.
+export HERD_PHP_84_INI_SCAN_DIR="$HOME/Library/Application Support/Herd/config/php/84/"
+
+
+# Herd injected PHP binary.
+export PATH="$HOME/Library/Application Support/Herd/bin/":$PATH

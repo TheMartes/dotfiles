@@ -1,1 +1,3 @@
-bin/bin/lua-language-server/log/*
+bin/bin/*
+!/bin/bin/tm
+!/bin/bin/pogmit

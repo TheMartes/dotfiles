@@ -23,11 +23,24 @@ vim.cmd.colorscheme "vscode"
 vim.g.mapleader = ' '
 
 local builtin = require('telescope.builtin')
-vim.keymap.set('n', '<leader>ff', builtin.find_files, { desc = 'Telescope find files' })
-vim.keymap.set('n', '<leader>fg', builtin.live_grep, { desc = 'Telescope live grep' })
+vim.keymap.set('n', '<C-p>', builtin.find_files, { desc = 'Telescope find files' })
+vim.keymap.set('n', '<C-S-f>', builtin.live_grep, { desc = 'Telescope live grep' })
 vim.keymap.set('n', '<leader>fb', builtin.buffers, { desc = 'Telescope buffers' })
-vim.keymap.set('n', '<leader>fh', builtin.help_tags, { desc = 'Telescope help tags' })
+vim.keymap.set('n', '<leader>ht', builtin.help_tags, { desc = 'Telescope help tags' })
 
+-- to show code outline
+vim.keymap.set("n", "<C-r>", "<cmd>Telescope aerial<CR>")
+
+-- Telescope file browser
+vim.keymap.set("n", "<C-S-e>", ":Telescope file_browser<CR>")
+
+-- Recent files
+vim.api.nvim_set_keymap("n", "<C-S-o>",
+  [[<cmd>lua require('telescope').extensions.recent_files.pick()<CR>]],
+  {noremap = true, silent = true})
+
+-- Format on save
+vim.cmd [[autocmd BufWritePre <buffer> lua vim.lsp.buf.format()]]
 
 -- Vim Config
 vim.opt.nu = true
@@ -48,3 +61,6 @@ vim.opt.incsearch = true
 vim.opt.scrolloff = 8
 vim.opt.isfname:append("@-@")
 vim.opt.updatetime = 50
+
+vim.g.loaded_matchparen = true
+

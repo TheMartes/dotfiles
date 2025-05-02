@@ -1,6 +1,6 @@
 return {
     {
-        "neoim/nvim-lspconfig",
+        "neovim/nvim-lspconfig",
         dependencies = {
             'saghen/blink.cmp',
         },
@@ -10,13 +10,6 @@ return {
             local capabilities = require('blink.cmp').get_lsp_capabilities()
 
             lspconfig.lua_ls.setup({
-                capabilities = capabilities,
-                on_attach = function(client, bufnr)
-                    require('lsp.handlers').setup(client, bufnr)
-                end,
-            })
-
-            lspconfig.ts_ls.setup({
                 capabilities = capabilities,
             })
 
@@ -28,8 +21,57 @@ return {
             })
             lspconfig.tailwindcss.setup({
                 capabilities = capabilities,
+                settings = {
+                    gopls = {
+                        gofumpt = true,
+                    }
+                }
             })
             lspconfig.gopls.setup({
+                capabilities = capabilities,
+            })
+
+            lspconfig.ols.setup({
+                capabilities = capabilities,
+            })
+
+            lspconfig.emmet_ls.setup({
+                capabilities = capabilities,
+            })
+
+            lspconfig.perlnavigator.setup({
+                capabilities = capabilities,
+                cmd = { "/Users/martes/.local/state/fnm_multishells/27409_1745594857842/bin/perlnavigator" }
+            })
+
+            local vue_typescript_plugin_path = vim.fn.stdpath('data')
+              .. '/mason/packages/vue-language-server/node_modules/@vue/language-server/node_modules/@vue/typescript-plugin'
+
+            lspconfig.ts_ls.setup {
+                init_options = {
+                  plugins = {
+                    {
+                      name = '@vue/typescript-plugin',
+                      location = vue_typescript_plugin_path,
+                      languages = { 'vue' },
+                    },
+                  },
+                },
+                filetypes = { 'typescript', 'javascript', 'javascriptreact', 'typescriptreact', 'vue' },
+                single_file_support = false,
+            }
+
+            lspconfig.volar.setup {
+                capabilities = capabilities
+            }
+
+            lspconfig.html.setup({
+                capabilities = capabilities,
+            })
+            lspconfig.cssls.setup({
+                capabilities = capabilities,
+            })
+            lspconfig.eslint.setup({
                 capabilities = capabilities,
             })
 

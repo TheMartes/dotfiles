@@ -76,17 +76,38 @@ vim.g.loaded_matchparen = true
 
 -- Shared Clipboard
 -- needs to have wl-clipboard (wl-copy, wl-paste) on wayland, otherwise use xclip
-vim.g.clipboard = {
-  name = "wl-clipboard",
-  copy = {
-    ["+"] = "wl-copy --foreground --type text/plain",
-    ["*"] = "wl-copy --foreground --type text/plain",
-  },
-  paste = {
-    ["+"] = "wl-paste --no-newline",
-    ["*"] = "wl-paste --no-newline",
-  },
-  cache_enabled = true,
-}
 
 vim.opt.clipboard:prepend { "unnamedplus" }
+
+-- Detect platform and configure clipboard provider
+local is_macos = vim.fn.has("macunix") == 1
+local is_wayland = os.getenv("WAYLAND_DISPLAY") ~= nil
+
+if is_wayland and not is_macos then
+  vim.g.clipboard = {
+    name = "wl-clipboard",
+    copy = {
+      ["+"] = "wl-copy --foreground --type text/plain",
+      ["*"] = "wl-copy --foreground --type text/plain",
+    },
+    paste = {
+      ["+"] = "wl-paste --no-newline",
+      ["*"] = "wl-paste --no-newline",
+    },
+    cache_enabled = true,
+  }
+elseif is_macos then
+  vim.g.clipboard = {
+    name = "pbcopy",
+    copy = {
+      ["+"] = "pbcopy",
+      ["*"] = "pbcopy",
+    },
+    paste = {
+      ["+"] = "pbpaste",
+      ["*"] = "pbpaste",
+    },
+    cache_enabled = true,
+  }
+end
+

@@ -1,4 +1,5 @@
 require("config/lazy")
+require("config/lualine")
 
 -- Theme
 vim.o.background = 'dark'
@@ -13,7 +14,7 @@ require('vscode').setup({
         vscLineNumber = '#FFFFFF',
     },
     group_overrides = {
-        Cursor = { fg=c.vscDarkBlue, bg=c.vscLightGreen, bold=true },
+        Cursor = { fg = c.vscDarkBlue, bg = c.vscLightGreen, bold = true },
     }
 })
 
@@ -23,21 +24,30 @@ vim.cmd.colorscheme "vscode"
 vim.g.mapleader = ' '
 
 local builtin = require('telescope.builtin')
-vim.keymap.set('n', '<C-p>', builtin.find_files, { desc = 'Telescope find files' })
-vim.keymap.set('n', '<leader>ff>', builtin.live_grep, { desc = 'Telescope live grep' })
-vim.keymap.set('n', '<leader>fb', builtin.buffers, { desc = 'Telescope buffers' })
+vim.keymap.set('n', '<leader>pf', builtin.find_files, { desc = 'Telescope find files' })
+vim.keymap.set('n', '<leader>sp', builtin.live_grep, { desc = 'Telescope live grep' })
+vim.keymap.set('n', '<leader>pb', builtin.buffers, { desc = 'Telescope buffers' })
 vim.keymap.set('n', '<leader>ht', builtin.help_tags, { desc = 'Telescope help tags' })
 
 -- to show code outline
-vim.keymap.set("n", "<C-r>", "<cmd>Telescope aerial<CR>")
+vim.keymap.set("n", "<leader>pt", "<cmd>Telescope aerial<CR>")
 
 -- Telescope file browser
-vim.keymap.set("n", "<C-e>", ":Telescope file_browser<CR>")
+vim.keymap.set("n", "<leader>fb", ":Telescope file_browser<CR>")
 
 -- Recent files
-vim.api.nvim_set_keymap("n", "<C-S-o>",
-  [[<cmd>lua require('telescope').extensions.recent_files.pick()<CR>]],
-  {noremap = true, silent = true})
+vim.api.nvim_set_keymap("n", "<leader>pr",
+    [[<cmd>lua require('telescope').extensions.recent_files.pick()<CR>]],
+    { noremap = true, silent = true })
+
+-- Recent projects
+vim.keymap.set('n', '<leader>pp', "<cmd>NeovimProjectDiscover<CR>", { desc = 'Recent projects' })
+
+-- Neotree
+vim.keymap.set('n', '<leader>op', '<cmd>Neotree<CR>', { desc = "Neotree toggle" })
+
+-- Explore (netrw)
+vim.keymap.set('n', '<leader>pv', '<cmd>Explore<CR>', { desc = "Netrw:)" })
 
 -- Format on save
 vim.cmd [[autocmd BufWritePre <buffer> lua vim.lsp.buf.format()]]
@@ -64,3 +74,19 @@ vim.opt.updatetime = 50
 
 vim.g.loaded_matchparen = true
 
+-- Shared Clipboard
+-- needs to have wl-clipboard (wl-copy, wl-paste) on wayland, otherwise use xclip
+vim.g.clipboard = {
+  name = "wl-clipboard",
+  copy = {
+    ["+"] = "wl-copy --foreground --type text/plain",
+    ["*"] = "wl-copy --foreground --type text/plain",
+  },
+  paste = {
+    ["+"] = "wl-paste --no-newline",
+    ["*"] = "wl-paste --no-newline",
+  },
+  cache_enabled = true,
+}
+
+vim.opt.clipboard:prepend { "unnamedplus" }

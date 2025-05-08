@@ -13,6 +13,7 @@ export TMUX_TMPDIR=~/.tmux/tmp
 export GO111MODULE=on
 export HOMEBREW_NO_AUTO_UPDATE=1
 export PATH="${KREW_ROOT:-$HOME/.krew}/bin:$PATH"
+export PATH="/home/martes/.config/emacs/bin:$PATH"
 
 # 1Password Agent
 export SSH_AUTH_SOCK=~/.1password/agent.sock
@@ -65,3 +66,10 @@ eval "$(fnm env --use-on-cd)"
 GPG_TTY=$(tty)
 export GPG_TTY
 
+
+# fnm
+FNM_PATH="/home/martes/.local/share/fnm"
+if [ -d "$FNM_PATH" ]; then
+  export PATH="/home/martes/.local/share/fnm:$PATH"
+  eval "`fnm env`"
+fi

@@ -39,11 +39,6 @@ return {
                 capabilities = capabilities,
             })
 
-            lspconfig.perlnavigator.setup({
-                capabilities = capabilities,
-                cmd = { "/Users/martes/.local/state/fnm_multishells/27409_1745594857842/bin/perlnavigator" }
-            })
-
             local vue_typescript_plugin_path = vim.fn.stdpath('data')
               .. '/mason/packages/vue-language-server/node_modules/@vue/language-server/node_modules/@vue/typescript-plugin'
 

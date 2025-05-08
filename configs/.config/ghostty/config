@@ -1,9 +1,13 @@
-font-family = "Menlo"
-font-size = 14
-window-padding-x = 14
-window-padding-y = 14
+font-family = "Iosevka Fixed"
+font-size = 13
+window-padding-x = 10
+window-padding-y = 10
+font-size = 16
 link-url = true
 font-thicken = true
 cursor-style = block
+window-decoration = server
 shell-integration-features = no-cursor
 theme = iTerm2 Smoooooth
+background-opacity = 1
+gtk-titlebar-hide-when-maximized = false

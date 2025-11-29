@@ -1,24 +1,6 @@
 require("config/lazy")
-require("config/lualine")
-
--- Theme
-vim.o.background = 'dark'
-
-local c = require('vscode.colors').get_colors()
-require('vscode').setup({
-    transparent = true,
-    italic_comments = true,
-    underline_links = true,
-    disable_nvimtree_bg = true,
-    color_overrides = {
-        vscLineNumber = '#FFFFFF',
-    },
-    group_overrides = {
-        Cursor = { fg = c.vscDarkBlue, bg = c.vscLightGreen, bold = true },
-    }
-})
-
-vim.cmd.colorscheme "vscode"
+--- disable for now, I'm not feeling the vibes
+--- require("config/lualine")
 
 -- Keybindings
 vim.g.mapleader = ' '
@@ -43,9 +25,6 @@ vim.api.nvim_set_keymap("n", "<leader>pr",
 -- Recent projects
 vim.keymap.set('n', '<leader>pp', "<cmd>NeovimProjectDiscover<CR>", { desc = 'Recent projects' })
 
--- Neotree
-vim.keymap.set('n', '<leader>op', '<cmd>Neotree<CR>', { desc = "Neotree toggle" })
-
 -- Explore (netrw)
 vim.keymap.set('n', '<leader>pv', '<cmd>Explore<CR>', { desc = "Netrw:)" })
 
@@ -61,7 +40,7 @@ vim.opt.shiftwidth = 4
 vim.opt.expandtab = true
 vim.opt.smartindent = true
 vim.opt.wrap = false
-vim.opt.termguicolors = true
+vim.opt.termguicolors = false
 vim.opt.swapfile = false
 vim.opt.backup = false
 vim.opt.undodir = os.getenv("HOME") .. "/.vim/undodir"

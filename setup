@@ -4,7 +4,7 @@
 mv $HOME/.zshrc $HOME/.zshrc.old
 
 if [[ -z $STOW_FOLDERS ]]; then
-    STOW_FOLDERS="bin,configs,iterm,karabiner,nvim,secrets,workspacify"
+    STOW_FOLDERS="bin,configs,nvim"
 fi
 
 if [[ -z $DOTFILES ]]; then

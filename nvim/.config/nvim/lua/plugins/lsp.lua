@@ -9,17 +9,17 @@ return {
             local lspconfig = require('lspconfig')
             local capabilities = require('blink.cmp').get_lsp_capabilities()
 
-            lspconfig.lua_ls.setup({
+            vim.lsp.config("lua_ls", {
                 capabilities = capabilities,
             })
 
-            lspconfig.astro.setup({
+            vim.lsp.config("astro", {
                 capabilities = capabilities,
             })
-            lspconfig.intelephense.setup({
+            vim.lsp.config("intelephense", {
                 capabilities = capabilities,
             })
-            lspconfig.tailwindcss.setup({
+            vim.lsp.config("tailwindcss", {
                 capabilities = capabilities,
                 settings = {
                     gopls = {
@@ -27,22 +27,22 @@ return {
                     }
                 }
             })
-            lspconfig.gopls.setup({
+            vim.lsp.config("gopls", {
                 capabilities = capabilities,
             })
 
-            lspconfig.ols.setup({
+            vim.lsp.config("ols", {
                 capabilities = capabilities,
             })
 
-            lspconfig.emmet_ls.setup({
+            vim.lsp.config("emmet_ls", {
                 capabilities = capabilities,
             })
 
             local vue_typescript_plugin_path = vim.fn.stdpath('data')
               .. '/mason/packages/vue-language-server/node_modules/@vue/language-server/node_modules/@vue/typescript-plugin'
 
-            lspconfig.ts_ls.setup {
+            vim.lsp.config("ts_ls", {
                 init_options = {
                   plugins = {
                     {
@@ -54,19 +54,19 @@ return {
                 },
                 filetypes = { 'typescript', 'javascript', 'javascriptreact', 'typescriptreact', 'vue' },
                 single_file_support = false,
-            }
+            })
 
-            lspconfig.volar.setup {
+            vim.lsp.config("volar", {
                 capabilities = capabilities
-            }
+            })
 
-            lspconfig.html.setup({
+            vim.lsp.config("html", {
                 capabilities = capabilities,
             })
-            lspconfig.cssls.setup({
+            vim.lsp.config("cssls", {
                 capabilities = capabilities,
             })
-            lspconfig.eslint.setup({
+            vim.lsp.config("eslint", {
                 capabilities = capabilities,
             })
 

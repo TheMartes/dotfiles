@@ -41,6 +41,7 @@ export LSCOLORS=ExGxBxDxCxEgEdxbxgxcxd
 
 # Aliases
 source $HOME/.aliases.sh
+source $HOME/.shell_secrets.sh
 
 export FZF_DEFAULT_OPTS=" \
 --color=bg+:#313244,bg:#1e1e2e,spinner:#f5e0dc,hl:#f38ba8 \
@@ -71,5 +72,12 @@ export GPG_TTY
 FNM_PATH="/home/martes/.local/share/fnm"
 if [ -d "$FNM_PATH" ]; then
   export PATH="/home/martes/.local/share/fnm:$PATH"
+  eval "`fnm env`"
+fi
+
+# fnm
+FNM_PATH="/home/martes/.local/share/fnm"
+if [ -d "$FNM_PATH" ]; then
+  export PATH="$FNM_PATH:$PATH"
   eval "`fnm env`"
 fi

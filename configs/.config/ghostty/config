@@ -1,13 +1,12 @@
-font-family = "Iosevka Fixed"
-font-size = 13
+font-family = "Hack"
+font-size = 12
 window-padding-x = 10
 window-padding-y = 10
-font-size = 16
 link-url = true
 font-thicken = true
 cursor-style = block
 window-decoration = server
 shell-integration-features = no-cursor
-theme = iTerm2 Smoooooth
+theme = Mariana
 background-opacity = 1
 gtk-titlebar-hide-when-maximized = false

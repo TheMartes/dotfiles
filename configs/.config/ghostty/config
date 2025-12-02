@@ -1,4 +1,4 @@
-font-family = "Hack"
+font-family = "JetBrains Mono"
 font-size = 12
 window-padding-x = 10
 window-padding-y = 10
@@ -7,6 +7,6 @@ font-thicken = true
 cursor-style = block
 window-decoration = server
 shell-integration-features = no-cursor
-theme = Mariana
+theme = Ubuntu
 background-opacity = 1
 gtk-titlebar-hide-when-maximized = false

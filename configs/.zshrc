@@ -24,7 +24,6 @@ export PATH="$BUN_INSTALL/bin:$PATH"
 
 # Theme
 ZSH_THEME="afowler"
-export BAT_THEME="Catppuccin-mocha"
 
 # Plugins
 plugins=(git)
@@ -81,3 +80,4 @@ if [ -d "$FNM_PATH" ]; then
   export PATH="$FNM_PATH:$PATH"
   eval "`fnm env`"
 fi
+export PATH="$HOME/.local/bin:$PATH"

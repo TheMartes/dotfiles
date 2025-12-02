@@ -6,6 +6,9 @@ return {
                 lightbulb = {
                     enable = false,
                 },
+                symbol_in_winbar = {
+                    enable = false,
+                }
             })
             local opts = { noremap = true, silent = true }
 

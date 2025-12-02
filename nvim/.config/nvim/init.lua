@@ -31,6 +31,9 @@ vim.keymap.set('n', '<leader>pv', '<cmd>Explore<CR>', { desc = "Netrw:)" })
 -- Format on save
 vim.cmd [[autocmd BufWritePre <buffer> lua vim.lsp.buf.format()]]
 
+-- show inline text on diagnostics
+vim.diagnostic.config({ virtual_text = true, virtual_lines = false, })
+
 -- Vim Config
 vim.opt.nu = true
 vim.opt.relativenumber = true

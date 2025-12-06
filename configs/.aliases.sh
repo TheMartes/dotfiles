@@ -26,3 +26,4 @@ unset gcs
 alias gcs="bash $HOME/.git-credentials-setter.sh " # leave the space in the end, due to argument passing
 
 alias vim="nvim "
+alias soundrr="systemctl --user restart wireplumber"

@@ -62,11 +62,11 @@ it's a lot of typing and copy pasting, so this is there just to make it more qui
 - [sddm](https://github.com/JiayuanWen/holoiso-sddm-steamos-theme)
 
 ### Linux specific settings
-#### Connec to BT devices on startup
+#### Connect to BT devices on startup
 Bluetooth doesn't connect to trusted devices on the startup. So [this script](https://github.com/TheMartes/dotfiles/tree/master/configs/.config/autostart/bluetooth-autoconnect.desktop) fixes it. Package [`bluetooth-autoconnect`](https://aur.archlinux.org/packages/bluetooth-autoconnect) is required. 
 
 #### Xbox Controller doesn't work via bluetooth.
-So first things first. Reboot to windows or use VM to boot windows. With the same bluetooth adapter connect to windows computer so the adapter can exchange first keys with the controller. Next update firmware via Xbox Services. Then boot next to windows, and pair the device. You will need `xpadneo-dkms` from your package manager and also `linux-kernel-headers` and `bluez` and `bluez-utils`. Reboot your computer and it should be walk in the park.
+So first things first. Reboot to windows or use VM to boot windows. With the same bluetooth adapter connect to windows computer so the adapter can exchange pairing keys with the controller. Next update firmware via Xbox Services. Then boot next back to linux, and pair the device. You will need `xpadneo-dkms` from your package manager and also `linux-kernel-headers` and `bluez` and `bluez-utils`. Reboot your computer and it should pair & connect automagically.
 
 #### Nvidia doesn't resume monitors after wake up from sleep/hibernate
 Driver 575-XX from nvidia works fine. 570 is stil bugged. Use with Kernel 6.12

@@ -9,7 +9,7 @@
 	editor = vim
 	attributesfile = ~/.gitattributes
 	pager = delta
-	sshCommand = ssh.exe
+	sshCommand = ssh
 
 [pager]
     branch = false

@@ -1,0 +1,60 @@
+[user]
+	name =
+	email =
+	signingkey =
+[core]
+	whitespace = fix,-indent-with-non-tab,space-before-tab,trailing-space,cr-at-eol
+	autocrlf = input
+	filemode = false
+	editor = vim
+	attributesfile = ~/.gitattributes
+	pager = delta
+	sshCommand = ssh.exe
+
+[pager]
+    branch = false
+
+[interactive]
+    diffFilter = delta --color-only
+
+[delta]
+    navigate = true
+    dark = true
+
+[conflict]
+    conflictStyle = zdiff3
+
+[push]
+	default = current
+
+[pull]
+	rebase = true
+
+[commit]
+	gpgsign = true
+
+[status]
+	showStash = true
+
+[rebase]
+	missingCommitsCheck = warn
+	abbreviateCommands = true
+
+[log]
+	decorate = true
+
+[color]
+	branch = auto
+	diff = auto
+	status = auto
+	sh = auto
+[credential]
+    helper = store
+[gpg]
+	program = gpg
+[filter "lfs"]
+	required = true
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
+

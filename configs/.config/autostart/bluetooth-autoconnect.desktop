@@ -1,0 +1,8 @@
+[Desktop Entry]
+Version=1.0
+Type=Application
+Name=bluetooth-autoconnect
+Exec=bluetooth-autoconnect
+Terminal=false
+StartupNotify=false
+Categories=Bluetooth;
